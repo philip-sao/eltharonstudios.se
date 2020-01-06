@@ -12,12 +12,41 @@
 
 	<div class="bImage">
 		<h1>Eltharons Warhammer Studio</h1>
+
+		<p>This page contains battle videos from two styles of miniature battles: Warhammer - Age of Sigmar and Warhammer Fantasy 8th edition. Choose below which battle style you want to watch. 
+		</p>
 			
-		<h2>AGE OF SIGMAR</h2>
-		<div class="style fade-in" id="aosFeed">
-			<h3>Beastmen VS Khorne-Sylvaneth</h3>
-			<iframe id="video" src="https://www.youtube.com/embed/aq73sZPq2-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div id="radios" class="boxed">
+			<input type="radio" id="aos" name="battleForm" value="Age of Sigmar">
+			<label for="aos">Age of Sigmar</label>
+
+			<input type="radio" id="f8th" name="battleForm" value="Warhammer Fantasy 8th">
+			<label for="f8th">Warhammer Fantasy 8th</label>
 		</div>
+
+		<div id="aosFeed" class="style fade-in">
+			<div id="feed" class="style fade-in">
+				<h2>Beastmen VS Khorne-Sylvaneth</h2>
+				<h3>2000 vs 2000 points pitched battle</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/aq73sZPq2-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div id="feed" class="style fade-in">
+				<h2>Skaven VS Daemons of Khorne</h2>
+				<h3>750 vs 750 points pitched battle</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/xd5b5dQOUjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div id="feed" class="style fade-in">
+				<h2>Beastmen VS Daemons of Khorne</h2>
+				<h3>750 vs 750 points pitched battle</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/nqVes4EnGWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div id="feed" class="style fade-in">
+				<h2>Skaven VS Stormcast Eternals</h2>
+				<h3>750 vs 750 points pitched battle</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/wwInluOrn0E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+
 	</div>
 
 </body>
@@ -28,6 +57,19 @@
 	var aosVideos = ["https://www.youtube.com/embed/wwInluOrn0E", "https://www.youtube.com/embed/nqVes4EnGWM", "https://www.youtube.com/embed/xd5b5dQOUjk", "https://www.youtube.com/embed/aq73sZPq2-Q"];
 
 	$(document).ready(function() {
+
+		$('#aosFeed').hide();
+		/*$('#whfFeed').hide();*/
+
+		$("input[type='radio']").click(function(){
+            var radioValue = $("input[name='battleForm']:checked").val();
+            if(radioValue == "Age of Sigmar") {
+            	$('#aosFeed').show();
+
+            } else if (radioValue == "Warhammer Fantasy 8th") {
+            	$('#aosFeed').hide();
+            }
+        });
 		
 	});
 
