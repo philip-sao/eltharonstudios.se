@@ -10,7 +10,7 @@ html, body {
 h1,h2,h3 {
 	color: #742525;
 	animation: fadeIn ease 5s;
-	font-size: 2rem;
+	font-size: 1rem;
 }
 
 h1 {
@@ -45,7 +45,8 @@ p {
 }
 .boxed label {
   display: inline-block;
-  width: 200px;
+  width: 100px;
+  text-align: center;
   padding: 10px;
   border: ridge 5px;
   font-weight: bold;
@@ -62,14 +63,13 @@ p {
     display: inline-block;
     height: 665px;
     overflow-y: scroll;
-    text-align: -webkit-center;
 }
 
 #feed {
 	box-shadow: 0px 0px 15px;
     margin: 20px 60px;
     max-width: max-content;
-    padding: 10px 60px;
+    padding: 10px 30px;
     display: inline-block;
 }
 
