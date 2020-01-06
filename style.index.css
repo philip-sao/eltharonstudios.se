@@ -1,13 +1,39 @@
-body {
-  background-color: lightblue;
+html, body {
+	/*background-image: url(./images/IMG_BELAKOR.jpg);
+	background-size: cover;*/
+	height: 150%;
+	margin: 0;
 }
 
 h1 {
-  color: saddlebrown;
-  text-align: center;
+	color: saddlebrown;
+	text-align: center;
 }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
+h2 {
+	color: saddlebrown;
+	margin-left: 60px;
+}
+
+#aos {
+    box-shadow: 0px 0px 15px;
+    margin: 20px 60px;
+    max-width: max-content;
+    padding: 20px;
+}
+
+.bImage {
+	/* The image used */
+	background-image: url(./images/IMG_BELAKOR.jpg);
+	height: 100%; 
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	/* Border animations */
+ 	border: solid 30px #742525;
+	transition: border-width 2.5s linear;
+	/*box-shadow: 0px 0px 0px 5px #FC5185;*/
+	/*border-block-end: none;*/
 }
