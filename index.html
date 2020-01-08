@@ -29,21 +29,25 @@
 				<h2>Beastmen VS Khorne-Sylvaneth</h2>
 				<h3>2000 points (2 vs 1) pitched battle</h3>
 				<iframe id="video" src="https://www.youtube.com/embed/aq73sZPq2-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p id="date">15th December 2019</p>
 			</div>
 			<div id="feed" class="style fade-in">
 				<h2>Skaven VS Daemons of Khorne</h2>
 				<h3>750 points pitched battle</h3>
 				<iframe id="video" src="https://www.youtube.com/embed/xd5b5dQOUjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p id="date">2nd November 2019</p>
 			</div>
 			<div id="feed" class="style fade-in">
 				<h2>Beastmen VS Daemons of Khorne</h2>
 				<h3>750 points pitched battle</h3>
 				<iframe id="video" src="https://www.youtube.com/embed/nqVes4EnGWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p id="date">27th October 2019</p>
 			</div>
 			<div id="feed" class="style fade-in">
 				<h2>Skaven VS Stormcast Eternals</h2>
 				<h3>750 points pitched battle</h3>
 				<iframe id="video" src="https://www.youtube.com/embed/wwInluOrn0E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p id="date">6th October 2019</p>
 			</div>
 		</div>
 
@@ -94,15 +98,21 @@
 
 		$('#whfFeed').hide();
 
+		$("input:radio:first").attr('checked', true);
+
 		$("input[type='radio']").click(function(){
+
             var radioValue = $("input[name='battleForm']:checked").val();
             if(radioValue == "Age of Sigmar") {
             	$('#aosFeed').show();
             	$('#whfFeed').hide();
-
+            	$('.bImage').css("background-image", "url(./images/IMG_BELAKOR.jpg)");
+            	$('.bImage').css("animation", "fadeIn ease 2s");
             } else if (radioValue == "Warhammer Fantasy 8th") {
             	$('#aosFeed').hide();
             	$('#whfFeed').show();
+            	$('.bImage').css("background-image", "url(./images/IMG_BLOODTH.jpg)");
+            	$('.bImage').css("animation", "fadeIn ease 2s");
             }
         });
 		
