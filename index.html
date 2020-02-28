@@ -5,26 +5,70 @@
 	<title>WarhammerStudio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
 </head>
 
 <body>
 
-	<div class="bImage">
-		<h1>Eltharons Warhammer Studio</h1>
+		<!-- Header section -->
+		<div class="header-bar">
+			<div class="header-icon">
+				<a href="./index.html" class="header-icon">
+					<img src="./images/logo.png" id="logo">
+				</a>
+			</div>
+			<div class="header-radio">
+				<input type="radio" value="AoS">
+				<label class="AoS-radio" for="AoS">Age of Sigmar</label>
 
-		<p style="font-size:1rem;">This page contains battle videos from two styles of miniature battles: Warhammer - Age of Sigmar and Warhammer Fantasy 8th edition. <br>Choose below which battle style you prefer. 
-		</p>
-			
-		<div id="radios" class="boxed">
-			<input type="radio" id="aos" name="battleForm" value="Age of Sigmar">
-			<label for="aos">Age of Sigmar</label>
+				<input type="radio" value="WF8">
+				<label class="WF8-radio"for="WF8">Fantasy 8th</label>			
 
-			<input type="radio" id="f8th" name="battleForm" value="Warhammer Fantasy 8th">
-			<label for="f8th">Warhammer Fantasy 8th</label>
+				<input type="radio" value="Paint">
+				<label class="Paint-radio"for="Paint">Painting & Scenery</label>		
+			</div>
 		</div>
 
-		<div id="aosFeed" class="style fade-in">
+		<div class="timeline">
+
+			<div class="landing-container">
+
+				<video autoplay muted loop id="intro-video">
+					<source src="./videos/intro_new.mov" type="video/mp4">
+					Your browser does not support this HTML5 video.
+				</video>
+				
+		  		<div id="intro-banner-container" class="style fade-in">
+		  			<div id="intro-date">2 Feb 2020</div>
+		  			<div id="intro-line"></div>
+		  			<div class="intro-arrow-container">	
+		  				<img src="./images/arrow.png" id="intro-arrow">
+		  			</div>
+					<h1>Chaos Enters The Mortal Realms</h1>
+
+		  			<div class="intro-image-container">	
+		  				<img src="./images/chaosbeasts1.jpg" id="intro-image">
+		  			</div>
+
+				</div>
+
+			</div>
+
+			<div class="timeline-content">
+				<div>
+					<p id="battle-report-descr">2000 vs 2000 points (2 vs 2) pitched battle</p>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/JiCXcmKxlK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+
+		</div>
+		
+
+
+		<!--<div id="aosFeed" class="style fade-in">
 			<div id="feed" class="style fade-in">
 				<h2>Beastmen VS Khorne-Sylvaneth</h2>
 				<h3>2000 points (2 vs 1) pitched battle</h3>
@@ -83,22 +127,28 @@
 				<h3>1600 points fantasy 8th edition</h3>
 				<iframe id="video" src="https://www.youtube.com/embed/U_p_a9U0tng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-		</div>
+		</div>-->
 
-	</div>
 
 </body>
 </html>
 
 <script>
 
-	var aosVideos = ["https://www.youtube.com/embed/wwInluOrn0E", "https://www.youtube.com/embed/nqVes4EnGWM", "https://www.youtube.com/embed/xd5b5dQOUjk", "https://www.youtube.com/embed/aq73sZPq2-Q"];
+	//var aosVideos = ["https://www.youtube.com/embed/wwInluOrn0E", "https://www.youtube.com/embed/nqVes4EnGWM", "https://www.youtube.com/embed/xd5b5dQOUjk", "https://www.youtube.com/embed/aq73sZPq2-Q"];
 
 	$(document).ready(function() {
 
-		$('#whfFeed').hide();
+		$( ".intro-arrow-container" ).click(function() {
+	        window.scrollTo ({
+	            top: 1000,
+	            behavior:"smooth"
+	        });
+		});
 
-		$("input:radio:first").attr('checked', true);
+
+
+		//$("input:radio:first").attr('checked', true);
 
 		$("input[type='radio']").click(function(){
 
