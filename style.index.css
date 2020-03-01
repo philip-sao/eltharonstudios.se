@@ -2,9 +2,9 @@
 	font-family: sans-serif !important;
 }
 
-* {
+/** {
   box-sizing: border-box;
-}
+}*/
 
 html, body {
 	margin: 0;
@@ -70,11 +70,35 @@ html, body {
 
 }
 
-#intro-video {
+.intro-background {
+  position: absolute;
+  width: 100%;
+  margin-top: -6rem;
+}
+
+/*@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+#animate-area {
+  width: 200px;
+  height: 200px;
+  background-image: url(./images/intro-background.jpg);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 10s linear infinite alternate;
+}*/
+
+
+/*#intro-video {
   position: absolute;
   width: 100%;
   padding-top: 110px;
-}
+}*/
 
 #intro-banner-container {
   position: absolute;
