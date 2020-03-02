@@ -2,9 +2,9 @@
 	font-family: sans-serif !important;
 }
 
-/** {
+* {
   box-sizing: border-box;
-}*/
+}
 
 html, body {
 	margin: 0;
@@ -29,12 +29,9 @@ html, body {
   border-bottom: solid;
 }
 
-.header-icon {
-  /*margin: 1rem 3rem 1rem 1rem;*/
-}
-
 #logo {
   width: 10rem;
+  padding: 1rem 2rem 1rem 1rem;
 }
 
 .header-radio {
