@@ -9,7 +9,7 @@
 html, body {
 	margin: 0;
   min-width: fit-content;
-  background-image: url('./images/intro.png');
+  background-image: url('./images/background.png');
   background-repeat: no-repeat;
   /*background-attachment: fixed; */
   background-size: 100%;
