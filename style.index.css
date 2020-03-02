@@ -9,6 +9,10 @@
 html, body {
 	margin: 0;
   min-width: fit-content;
+  background-image: url('./images/intro.png');
+  background-repeat: no-repeat;
+  /*background-attachment: fixed; */
+  background-size: 100%;
 }
 
 /* Header Section */
@@ -26,7 +30,7 @@ html, body {
 }
 
 .header-icon {
-  margin: 1rem 3rem 1rem 1rem;
+  /*margin: 1rem 3rem 1rem 1rem;*/
 }
 
 #logo {
@@ -62,8 +66,10 @@ html, body {
 /* Timeline */
 
 .timeline {
-  /*width: inherit;*/
+  /*background-image: url(./images/intro.jpg);
+  width: inherit;*/
   position: relative;
+
 }
 
 .landing-container {
