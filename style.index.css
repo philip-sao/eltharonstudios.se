@@ -1,18 +1,10 @@
 * {
 	font-family: sans-serif !important;
-}
-
-* {
   box-sizing: border-box;
 }
 
 html, body {
 	margin: 0;
- /* min-width: fit-content;
-  background-image: url('./images/background.png');
-  background-repeat: no-repeat;
-  /*background-attachment: fixed; 
-  background-size: 100%;*/  
 }
 
 /* Header Section */
@@ -58,6 +50,15 @@ html, body {
 
 .AoS-radio:hover, .WF8-radio:hover, .Paint-radio:hover {
   background-color: #f2f2f2;
+}
+
+.header-follow {
+  display: inline-flex;
+}
+
+#youtubelogo {
+  margin: 11px;
+  height: 25px;
 }
 
 /* Timeline */
