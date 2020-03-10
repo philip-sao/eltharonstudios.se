@@ -11,7 +11,7 @@
 
 <body>
 		<!-- Header section -->
-		<div class="header-bar">
+		<div id="header-bar-id" class="header-bar">
 			<a href="./index.html">
 				<img src="./images/logo.png" id="logo">
 			</a>
@@ -26,7 +26,7 @@
 				<label class="Paint-radio"for="Paint">Painting & Scenery</label>		
 			</div>
 
-			<div class="header-follow">
+			<div class="header-follow-me">
 				<p>Follow me on </p> <!--<a href="./index.html"> -->
 				<button type="button" class="youTubeButton"><i class="youtube-play"></i></button>
 			</div>	
@@ -142,6 +142,18 @@
 	//var aosVideos = ["https://www.youtube.com/embed/wwInluOrn0E", "https://www.youtube.com/embed/nqVes4EnGWM", "https://www.youtube.com/embed/xd5b5dQOUjk", "https://www.youtube.com/embed/aq73sZPq2-Q"];
 
 	$(document).ready(function() {
+
+		window.onscroll = function() {
+			headerResize()
+		};
+
+		function headerResize() {
+		  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+		    document.getElementById("header-bar-id").style.height = "80px";
+		  } else {
+		  	document.getElementById("header-bar-id").style.height = "100px";
+		  }
+		}
 
 		$( ".intro-arrow-container" ).click(function() {
 	        window.scrollTo ({

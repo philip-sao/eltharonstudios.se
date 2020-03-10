@@ -19,6 +19,8 @@ html, body {
   align-items: center;
   flex-wrap: nowrap;
   border-bottom: solid;
+  height: 100px;
+  transition: 0.2s;
 }
 
 #logo {
@@ -52,14 +54,15 @@ html, body {
   background-color: #f2f2f2;
 }
 
-.header-follow {
+.header-follow-me {
   display: inline-flex;
+  margin: 0 25px 0 auto;
 }
 
 .youTubeButton {
   background-color: black;
   border: none;
-  border-radius: 20%;
+  border-radius: 25%;
   place-self: center;
   margin-left: 10px;
   padding: 4px 11px 3px 13px;
