@@ -56,16 +56,28 @@ html, body {
   display: inline-flex;
 }
 
-#youtubelogo {
-  margin: 11px;
-  height: 25px;
+.youTubeButton {
+  background-color: black;
+  border: none;
+  border-radius: 20%;
+  place-self: center;
+  margin-left: 10px;
+  padding: 4px 11px 3px 13px;
+  cursor: pointer;
+}
+
+.youtube-play {
+  width: 0; 
+  height: 0; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid white;
+  display: inline-block;
 }
 
 /* Timeline */
 
 .timeline {
-  /*background-image: url(./images/intro.jpg);
-  width: inherit;*/
   position: relative;
 
 }
