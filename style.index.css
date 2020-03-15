@@ -7,7 +7,7 @@ html, body {
 	margin: 0;
 }
 
-/* Header Section */
+/* Header Bar Section */
 
 .header-bar {
   position: fixed;
@@ -18,14 +18,18 @@ html, body {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  border-bottom: solid;
+  border-bottom: solid 2px;
   height: 100px;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 #logo {
   width: 10rem;
   padding: 1rem 2rem 1rem 1rem;
+}
+
+#logo:hover {
+  transform: scale(1.02);
 }
 
 .header-radio {
@@ -48,10 +52,13 @@ html, body {
 
 .AoS-radio, .WF8-radio, .Paint-radio {
   margin-right: 25px;
+  transition: all .3s ease-in-out;
 }
 
 .AoS-radio:hover, .WF8-radio:hover, .Paint-radio:hover {
   background-color: #f2f2f2;
+  transform: scale(0.97);
+  cursor: pointer;
 }
 
 .header-follow-me {
@@ -60,13 +67,14 @@ html, body {
 }
 
 .youTubeButton {
-  background-color: black;
+  background-color: #FF0000;
   border: none;
   border-radius: 25%;
   place-self: center;
   margin-left: 10px;
   padding: 4px 11px 3px 13px;
   cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 
 .youtube-play {
@@ -76,6 +84,10 @@ html, body {
   border-bottom: 5px solid transparent;
   border-left: 10px solid white;
   display: inline-block;
+}
+
+.youTubeButton:hover {
+  transform: scale(1.05);
 }
 
 /* Timeline */
@@ -89,6 +101,7 @@ html, body {
   position: absolute;
   width: 100%;
   margin-top: 5rem;
+  box-shadow: 0px 0px 5px 1px;
 }
 
 /*@keyframes animatedBackground {
@@ -225,5 +238,22 @@ h1 {
   100% {
     opacity:1;
   }
+}
+
+
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_21.gif) center no-repeat #fff;
 }
 

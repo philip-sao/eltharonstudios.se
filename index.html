@@ -2,14 +2,22 @@
 <html>
 
 <head>
-	<title>Home Studio</title>
+	<title>Eltharons Studio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.index.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<!-- Loading on page landing -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	<script>
+		$(window).on("load", function() {
+			$(".se-pre-con").fadeOut("slow");;
+		});
+	</script>
 </head>
 
 <body>
+	<div class="se-pre-con"></div>
 		<!-- Header section -->
 		<div id="header-bar-id" class="header-bar">
 			<a href="./index.html">
@@ -149,7 +157,7 @@
 
 		function headerResize() {
 		  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-		    document.getElementById("header-bar-id").style.height = "80px";
+		    document.getElementById("header-bar-id").style.height = "75px";
 		  } else {
 		  	document.getElementById("header-bar-id").style.height = "100px";
 		  }
