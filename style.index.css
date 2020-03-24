@@ -211,7 +211,7 @@ h1 {
     display: block;
     position: absolute;
     background: white;
-    margin-top: 45rem;
+    margin-top: 50rem;
     width: 100%;
     padding: 20px 0;
     box-shadow: unset;
@@ -231,7 +231,7 @@ h1 {
   }
 
   #follow-me-id {
-    display: none;
+    font-size: 12px;
   }
 
 }
