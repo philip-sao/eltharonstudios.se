@@ -164,14 +164,19 @@
 		function headerResize() {
 		  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 		    document.getElementById("header-bar-id").style.height = "75px";
+		    var hide = document.getElementById("intro-arrow");
+		    //hide.style.display = "none";
+		    hide.style.animation = "bounce 0s";
 		  } else {
 		  	document.getElementById("header-bar-id").style.height = "100px";
+		  	//var show = document.getElementById("intro-arrow");
+		    //show.style.animation = "bounce 1s";
 		  }
 		}
 
 		$( ".intro-arrow-container" ).click(function() {
 	        window.scrollTo ({
-	            top: 1000,
+	            top: 500,
 	            behavior:"smooth"
 	        });
 		});
