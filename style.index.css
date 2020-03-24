@@ -91,6 +91,18 @@ html, body {
   .header-radio {
     display: none;
   }
+
+  #logo {
+    width: 7rem;
+    padding: 1rem 0rem 1rem 1rem;
+  }
+
+  .mobile-menu {
+    width: 65px;
+    vertical-align: middle;
+    display: block !important;
+  }
+
 }
 
 /* ------------ Content ------------ */
@@ -148,7 +160,7 @@ html, body {
 #intro-line {
   border: ridge 1px;
   border-color: indianred;
-  margin: 8px 45% 8px;
+  margin: 8px 45% 18px;
 }
 
 .intro-arrow-container {
@@ -199,7 +211,7 @@ h1 {
     display: block;
     position: absolute;
     background: white;
-    margin-top: 30rem;
+    margin-top: 45rem;
     width: 100%;
     padding: 20px 0;
     box-shadow: unset;
@@ -207,6 +219,7 @@ h1 {
 
   h1 {
     font-size: 28px;
+    margin: 30px 0px 90px 0px;
   }
 
   .intro-youtube-container {
@@ -215,6 +228,10 @@ h1 {
 
   #youTubeVid {
     width: 80%
+  }
+
+  #follow-me-id {
+    display: none;
   }
 
 }
