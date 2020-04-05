@@ -4,12 +4,12 @@
 <head>
 	<title>Eltharon Studios</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.index.css">
+	<link rel="stylesheet" type="text/css" href="./style.index.css">
 	<link rel="icon" href="./images/logo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<!-- Loading on page landing -->
-	<script src="./javascript/cloudflare-v-2-8-3.js"></script>
+	<script src="./ext-javascript/cloudflare-v-2-8-3.js"></script>
 	<script>
 		$(window).on("load", function() {
 			$(".se-pre-con").fadeOut("slow");;
@@ -24,24 +24,24 @@
 			<a href="./index.html">
 				<img src="./images/logo.png" id="logo">
 			</a>
-			<div class="header-radio">
-				<input type="radio" value="AoS">
-				<label class="AoS-radio" for="AoS">Age of Sigmar</label>
+			<div class="header-menu">
+				<button class="header-menu-button" onclick="location.href='./pages/aos.html';">
+				<label class="AoS-label">Age of Sigmar</label></button>
 
-				<input type="radio" value="WF8">
-				<label class="WF8-radio"for="WF8">Fantasy 8th</label>			
+				<button class="header-menu-button" onclick="location.href='./index.html';">
+				<label class="WF8-label">Fantasy 8th</label></button>
 
-				<input type="radio" value="Paint">
-				<label class="Paint-radio"for="Paint">Painting & Scenery</label>	
+				<button class="header-menu-button" onclick="location.href='./index.html';">
+				<label class="Paint-label">Painting & Scenery</label></button>	
 			</div>
 
 			<div>
-				<img src="./images/mobile-menu.png" class="mobile-menu" 
+				<img class="mobile-menu" src="./images/mobile-menu.png" 
 					style="display:none;">
 			</div>
 
 			<div class="header-follow-me">
-				<p id="follow-me-id">follow me on</p> <!--<a href="./index.html"> -->
+				<p id="follow-me-id"></p> <!--<a href="./index.html"> -->
 				<button type="button" class="youTubeButton" 
 					onclick="location.href='https://www.youtube.com/channel/UC1VCYF0Cxq-N5NsingytkFg?view_as=subscriber';">
 					<i class="youtube-play"></i>
@@ -69,23 +69,22 @@
 		  			<div class="intro-arrow-container">	
 		  				<img src="./images/arrow.png" id="intro-arrow">
 		  			</div>
-					<h1>Chaos Enters The Mortal Realms</h1>
+					<h1>Chaos Enters The Mortal World</h1>
 
 		  			<div class="intro-youtube-container">	
 						<div>
-							<iframe id="youTubeVid" width="100%" height="240rem" src="https://www.youtube.com/embed/JiCXcmKxlK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe id="youtube-video" src="https://www.youtube.com/embed/JiCXcmKxlK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<p id="battle-report-descr">Sylvaneth & Stormcast Eternals VS Khorne & Beastmen<br><br>2000 vs 2000 points (2 vs 2) pitched battle</p>
 						</div>
 		  			</div>
 				</div>
 		</div>
+
+		<div class="footer">
+			<p id="open-footer">About us</p> 
+			<p id="open-footer">FAQ</p> 
+		</div>
 		
-
-
-
-
-
-
 		<!--<div id="aosFeed" class="style fade-in">
 			<div id="feed" class="style fade-in">
 				<h2>Beastmen VS Khorne-Sylvaneth</h2>
@@ -175,12 +174,16 @@
 		}
 
 		$( ".intro-arrow-container" ).click(function() {
-	        window.scrollTo ({
+	        window.scrollTo ( {
 	            top: 500,
 	            behavior:"smooth"
 	        });
 		});
 
+
+		$("#open-footer").click(function() {
+  			alert()
+		});
 
 
 		//$("input:radio:first").attr('checked', true);
