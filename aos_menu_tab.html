@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Eltharon Studios</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/aos_meny_tab_styling.css">
+	<link rel="icon" href="./images/logo.png">
+	<script src="./javascript/ajax-v-3-4-1-jquery.min.js"></script>
+	<!-- Loading on page landing -->
+	<script src="./javascript/cloudflare-v-2-8-3.js"></script>
+	<script>
+		$(window).on("load", function() {
+			$(".se-pre-con").fadeOut("slow");;
+		});
+	</script>
+</head>
+
+<body>
+	<div class="se-pre-con"></div>
+
+		<!-- Header section -->
+		<div id="header-bar-id" class="header-bar">
+			<a href="./index.html">
+				<img src="./images/logo.png" id="logo">
+			</a>
+			<div class="header-menu">
+				<button class="header-menu-button" onclick="location.href='./aos_menu_tab.html';">
+				<label class="AoS-label">Age of Sigmar</label></button>
+
+				<button class="header-menu-button" onclick="location.href='./aos_menu_tab.html';">
+				<label class="WF8-label">Fantasy 8th</label></button>
+
+				<button class="header-menu-button" onclick="location.href='./index.html';">
+				<label class="Paint-label">Painting & Scenery</label></button>	
+			</div>
+
+			<div class="header-follow-me">
+				<p id="follow-me-id"></p> <!--<a href="./index.html"> -->
+				<button type="button" class="youTubeButton" 
+					onclick="location.href='https://www.youtube.com/channel/UC1VCYF0Cxq-N5NsingytkFg?view_as=subscriber';">
+					<i class="youtube-play"></i>
+				</button>
+			</div>	
+		</div>
+
+		<!-- Start menubar section -->
+		<div class="menubar" id="menubar-id">
+			<a href="#2-Feb-2020" class="menubar-link active">2-Feb-2020</a>
+			<a href="#15-Dec-2019" class="menubar-link">15-Dec-2019</a>
+			<a href="#2-Nov-2019" class="menubar-link">2-Nov-2019</a>
+			<a href="#27-Oct-2019" class="menubar-link">27-Oct-2019</a>
+			<a href="#6-Oct-2019" class="menubar-link">6-Oct-2019</a>
+		</div>
+
+		<!-- Start content section -->
+		<div class="content">
+
+			<div class="grid-container">
+				<div class="grid-content-wide">
+					<img src="./images/intro-sylvaneth.png" id="grid-content-media">
+						<p class="intro-text"><strong>Sylvaneth-Stormcast Eternals<br>VS<br>Khorne-Beastmen<br></strong>
+						<span class="intro-text-small">2000 vs 2000 points (2 vs 2) pitched battle</span>
+						</p>
+						<button type="button" class="intro-button" id="intro-button-id">
+							<strong>See full video</strong></button>
+				</div>
+				<div class="grid-content-wide"><video autoplay muted loop id="grid-content-media">
+					<source src="./videos/intro_HD.mov" type="video/mp4">
+					Your browser does not support this HTML5 video.</video></div>
+				<div class="grid-content-wide">
+					<img src="./images/khorne-beast.png" id="grid-content-media"></div>
+				<div><img src="./images/giant.png" id="grid-content-media"></div>
+				<div><img src="./images/treelord.png" id="grid-content-media"></div>
+				<div><img src="./images/sylvaneth-warriors.png" id="grid-content-media"></div>
+				<div><img src="./images/sylvaneth.png" id="grid-content-media"></div>
+				<div class="grid-content-wide">
+					<img src="./images/k-b-army.png" id="grid-content-media"></div>
+				<div class="grid-content-wide">
+					<img src="./images/chaos-lords.png" id="grid-content-media"></div>
+				<div class="grid-content-wide">
+					<img src="./images/stormcasts.png" id="grid-content-media"></div>
+			</div>
+
+			<!--<div class="grid-container">
+				<div class="war-content">2nd newest some text intro</div>
+				<div class="war-content">Something</div>
+			</div>-->
+
+		</div>
+							
+
+		<!-- Start footer section -->
+		<div class="footer">
+			<p id="open-footer">About us</p> 
+			<p id="open-footer">FAQ</p> 
+		</div>
+		
+		<!--<div id="aosFeed" class="style fade-in">
+			<div id="feed" class="style fade-in">
+				<h2>Beastmen VS Khorne-Sylvaneth</h2>
+				<h3>2000 points (2 vs 1) pitched battle</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/aq73sZPq2-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p id="date">15th December 2019</p>
+			</div>
+			<div id="feed" class="style fade-in">
+				<h2>Skaven VS Daemons of Khorne</h2>
+				<h3>750 points pitched battle</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/xd5b5dQOUjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p id="date">2nd November 2019</p>
+			</div>
+			<div id="feed" class="style fade-in">
+				<h2>Beastmen VS Daemons of Khorne</h2>
+				<h3>750 points pitched battle</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/nqVes4EnGWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p id="date">27th October 2019</p>
+			</div>
+			<div id="feed" class="style fade-in">
+				<h2>Skaven VS Stormcast Eternals</h2>
+				<h3>750 points pitched battle</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/wwInluOrn0E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p id="date">6th October 2019</p>
+			</div>
+		</div>
+
+
+		<div id="whfFeed" class="style fade-in">
+			<div id="feed" class="style fade-in">
+				<h2>Lizarmen VS Beastmen</h2>
+				<h3>2000 points fantasy 8th edition</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/VAe8sfIciZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div id="feed" class="style fade-in">
+				<h2>High Elves VS Dwarves</h2>
+				<h3>1200 points fantasy 8th edition</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/t8wPX6vPCco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div id="feed" class="style fade-in">
+				<h2>Daemons of Chaos VS Ogre Kingdom</h2>
+				<h3>1600 points fantasy 8th edition</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/Zo7Uf-yaLFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div id="feed" class="style fade-in">
+				<h2>High Elves VS Wood Elves</h2>
+				<h3>1200 points fantasy 8th edition</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/9Dv5pZ0Ronc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+						<div id="feed" class="style fade-in">
+				<h2>Lizardmen VS High Elves</h2>
+				<h3>1000 points fantasy 8th edition</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/6CoHWXI5qsI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+						<div id="feed" class="style fade-in">
+				<h2>Bretonnia VS Beastmen</h2>
+				<h3>1600 points fantasy 8th edition</h3>
+				<iframe id="video" src="https://www.youtube.com/embed/U_p_a9U0tng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>-->
+
+
+</body>
+</html>
+
+<script>
+
+	$(document).ready(function() {
+
+		window.onscroll = function() {
+			headerResize()
+		};
+
+		function headerResize() {
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+				document.getElementById("header-bar-id").style.height = "75px";  
+				document.getElementById("menubar-id").style.top = "75px";  
+			} else {
+				document.getElementById("header-bar-id").style.height = "100px";
+				document.getElementById("menubar-id").style.top = "100px";  
+			}
+		}
+
+		$( ".intro-arrow-container" ).click(function() {
+	        window.scrollTo ( {
+	            top: 800,
+	            behavior:"smooth"
+	        });
+		});
+
+		$('.menubar-link').click(function() {
+			$('.menubar-link.active').removeClass('active');
+        	$(this).addClass('active');
+		});
+		
+	});
+
+</script>
