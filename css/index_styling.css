@@ -143,6 +143,13 @@ html, body {
   padding-top: 75px;
 }
 
+/* Temporary static intro background */
+.intro-background {
+  position: absolute;
+  width: 100%;
+  margin-top: 5rem;
+}
+
 #intro-banner-container {
   position: absolute;
   margin: 62% 0 5% 0;
