@@ -109,7 +109,7 @@ html, body {
 
   .header-menu label {
     padding: 6px 8px;
-    /*border: ridge 1px;*/
+    border: none;
     font-size: x-small;
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 0px 2px rgba(0,0,0,0.22), 0 2px 4px rgba(0,0,0,0.24);
@@ -307,7 +307,7 @@ div.content {
     left: 9%;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 13.3%;
+    height: 14.3%;
     width: 50%;
     padding: 2.5%;
     font-size: x-small;
@@ -335,9 +335,13 @@ div.content {
     bottom: 12px;
     right: 5%;
     border: none;
-    padding: 5px;
-    width: 45px;
+    padding: 8px;
+    width: 50px;
     font-size: xx-small;
+  }
+
+  .video-frame-class {
+    height: 60%;
   }
 
 }
