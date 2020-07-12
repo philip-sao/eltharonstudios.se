@@ -67,11 +67,12 @@
 						<span class="intro-text-small">
 							2000 vs 2000 points (2 vs 2) pitched battle</span>
 					</p>
-					<button type="button" class="intro-button" id="intro-button-id">
+					<button type="button" class="intro-button" id="intro-button-id"	data-link="https://www.youtube.com/embed/JiCXcmKxlK0?enablejsapi=1&version=3&playerapiid=ytplayer">
 					<strong>See full video</strong></button>
-					<video autoplay muted loop preload controls playsinline 
+					<video autoplay muted loop preload playsinline 
 						id="grid-content-media"><source src="videos/intro_HD.MOV"/>
 					</video>
+					<div id="video-frame"></div>
 					<!--<video autoplay muted loop id="grid-content-media">
 					<source src="videos/intro_HD.MOV" type="video/mp4">
 					Your browser does not support this HTML5 video.</video></div>-->
@@ -93,6 +94,9 @@
 				<div class="grid-content-wide">
 					<img src="images/stormcasts.png" id="grid-content-media"></div>
 			</div>
+			<button type="button" id="to-top-button-id">
+				Back To The Top
+			</button>
 		</div>
 							
 
@@ -169,6 +173,8 @@
 
 <script>
 
+	var mouseIsInside = false;
+
 	$(document).ready(function() {
 
 		window.onscroll = function() {
@@ -179,13 +185,18 @@
 			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 				document.getElementById("header-bar-id").style.height = "75px";  
 				document.getElementById("menubar-id").style.top = "75px";  
+
+				document.getElementById("to-top-button-id").style.transition = "opacity 0.3s ease";
+				document.getElementById("to-top-button-id").style.opacity = "1";
 			} else {
 				document.getElementById("header-bar-id").style.height = "100px";
-				document.getElementById("menubar-id").style.top = "100px";  
+				document.getElementById("menubar-id").style.top = "100px"; 
+
+				document.getElementById("to-top-button-id").style.opacity = "0";
 			}
 		}
 
-		$( ".intro-arrow-container" ).click(function() {
+		$(".intro-arrow-container").click(function() {
 	        window.scrollTo ( {
 	            top: 800,
 	            behavior:"smooth"
@@ -196,7 +207,35 @@
 			$('.menubar-link.active').removeClass('active');
         	$(this).addClass('active');
 		});
-		
+
+		$("#to-top-button-id").click(function() {
+	        window.scrollTo ( {
+	            top: 0,
+	            behavior:"smooth"
+	        });
+		});
+
+		$(".intro-button").click(function () {
+		    var $this = $(this);
+		    var $iframe = $("<iframe>").attr("src", $this.data("link")); /* snabbare att lägga på css här?*/
+		    $iframe.addClass("video-frame-class");
+		    $("#video-frame").append($iframe);
+		    /*$iframe.wrap("<div class='class-video'>");*/
+		});
+
+		$('#video-frame').hover(function() { 
+	        mouseIsInside = true; 
+		}, function() { 
+		    mouseIsInside = false; 
+		});
+
+		$("body").mouseup(function() { 
+			$('.video-frame-class').each(function(){
+				this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+			});
+		    if(! mouseIsInside) $('.video-frame-class').hide();
+	    });
+
 	});
 
 </script>

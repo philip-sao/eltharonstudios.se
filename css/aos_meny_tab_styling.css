@@ -22,6 +22,7 @@ html, body {
   /*border-bottom: solid 1px;*/
   height: 100px;
   transition: 0.4s;
+  z-index: 100;
 }
 
 #logo {
@@ -108,8 +109,10 @@ html, body {
 
   .header-menu label {
     padding: 6px 8px;
-    border: ridge 1px;
+    /*border: ridge 1px;*/
     font-size: x-small;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 2px rgba(0,0,0,0.22), 0 2px 4px rgba(0,0,0,0.24);
   }
 
   #logo {
@@ -130,7 +133,12 @@ html, body {
 }
 
 
+
+
 /* ------------ Menubar section ------------ */
+
+
+
 
 .menubar {
   top: 100px;
@@ -142,7 +150,7 @@ html, body {
   text-align: center;
   height: 50px;
   padding: 15px;
-  z-index: 1;
+  z-index: 100;
 }
 
 .menubar-link {
@@ -189,7 +197,10 @@ html, body {
 }
 
 
+
 /* ------------ Content section ------------ */
+
+
 
 div.content {
   margin: 100px 20% 0 20%;
@@ -217,7 +228,6 @@ div.content {
 
 .intro-text {
   position: absolute;
-  /*top: 549px;*/
   left: 24%;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
@@ -243,6 +253,7 @@ div.content {
   border-radius: 5px;
   padding: 8px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .intro-button:hover {
@@ -253,6 +264,34 @@ div.content {
   width: 100%;
   border-radius: 5px;
 }
+
+#to-top-button-id {
+  position: fixed;
+  bottom: 68px;
+  right: 14%;
+  border: none;
+  padding: 15px;
+  background-image: linear-gradient(to right, #333333 0%, #666666 71%);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0;
+  box-shadow: 4px 4px 4px #888888;
+  z-index: 99;
+}
+
+.video-frame-class {
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  position: fixed;
+  top: 10%;
+  border: none;
+  box-shadow: 4px 4px 4px 4px #888888;
+  background: #888888;
+  z-index: 150;
+}
+
 
 /* Content MOBILE SOLUTION */
 
@@ -265,11 +304,10 @@ div.content {
 
   .intro-text {
     position: absolute;
-    /*top: 348px;*/
     left: 9%;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 11.3%;
+    height: 13.3%;
     width: 50%;
     padding: 2.5%;
     font-size: x-small;
@@ -292,18 +330,30 @@ div.content {
     font-size: x-small;
   }
 
+  #to-top-button-id {
+    position: fixed;
+    bottom: 12px;
+    right: 5%;
+    border: none;
+    padding: 5px;
+    width: 45px;
+    font-size: xx-small;
+  }
+
 }
+
 
 
 /* ----- Footer section ----- */
 
+
+
 .footer {
   position: absolute;
-  /*top: 100rem;*/
   width: 100%;
   background-color: #404040;
   text-align: center;
-  margin: 35px 0 0 0;
+  margin: 10px 0 0 0;
   user-select: none;
 }
 
@@ -322,14 +372,19 @@ div.content {
 /* Footer MOBILE SOLUTION */
 
 @media screen and (max-width: 980px) {
+  
   .footer {
-    /*top: 42rem;*/
+    border-top: solid 1px;
+    font-size: x-small;
   }
   
 }
 
 
+
 /* ----- ANIMATIONS ----- */
+
+
 
 .fade-in {
   animation: fadeIn ease 1s;
@@ -352,7 +407,6 @@ div.content {
     opacity:1;
   }
 }
-
 
 /* Paste this css to your style sheet file or under head tag */
 /* This only works with JavaScript, 
