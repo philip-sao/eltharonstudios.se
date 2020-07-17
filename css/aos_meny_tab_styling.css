@@ -319,7 +319,7 @@ div.content {
     left: 9%;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    height: 90px; /*height: 14.3%;*/
+    height: 100px; /*height: 14.3%;*/
     width: 50%;
     padding: 2.5%;
     font-size: x-small;
@@ -331,7 +331,7 @@ div.content {
 
   .intro-button {
     position: absolute;
-    margin-top: 68px; /*top: 433px;*/
+    margin-top: 75px; /*top: 433px;*/
     left: 23%;
     background: linear-gradient(to right, #dc9014 0%, #f6e27e 50%, #dc9014 100%);
     width: 95px;
@@ -348,11 +348,11 @@ div.content {
 
   #to-top-button-id {
     position: fixed;
-    bottom: 12px;
-    right: 5%;
+    bottom: 30px;
+    right: 7%;
     border: none;
     padding: 8px;
-    width: 50px;
+    width: 60px;
     font-size: xx-small;
   }
 
