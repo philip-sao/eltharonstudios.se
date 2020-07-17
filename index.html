@@ -19,64 +19,60 @@
 <body>
 	<div class="se-pre-con"></div>
 
-		<!-- Header section -->
-		<div id="header-bar-id" class="header-bar">
-			<a href="https://www.eltharonstudios.se">
-				<img src="images/logo.png" id="logo">
-			</a>
-			<div class="header-menu">
-				<button class="header-menu-button" onclick="location.href='https://www.eltharonstudios.se/aos_menu_tab.html';">
-				<label class="AoS-label">Age of Sigmar</label></button>
+	<!-- Header section -->
+	<div id="header-bar-id" class="header-bar">
+		<a href="https://www.eltharonstudios.se">
+			<img src="images/logo.png" id="logo">
+		</a>
+		<div class="header-menu">
+			<button class="header-menu-button" onclick="location.href='https://www.eltharonstudios.se/aos_menu_tab.html';">
+			<label class="AoS-label">Age of Sigmar</label></button>
 
-				<button class="header-menu-button" onclick="location.href='https://www.eltharonstudios.se/index.html';">
-				<label class="WF8-label">Fantasy 8th</label></button>
+			<button class="header-menu-button" onclick="location.href='https://www.eltharonstudios.se/index.html';">
+			<label class="WF8-label">Fantasy 8th</label></button>
 
-				<button class="header-menu-button" onclick="location.href='https://www.eltharonstudios.se/index.html';">
-				<label class="Paint-label">Painting & Scenery</label></button>	
-			</div>
-
-			<div class="header-follow-me">
-				<p id="follow-me-id"></p> <!--<a href="./index.html"> -->
-				<button type="button" class="youTubeButton" 
-					onclick="location.href='https://www.youtube.com/channel/UC1VCYF0Cxq-N5NsingytkFg?view_as=subscriber';">
-					<i class="youtube-play"></i>
-				</button>
-			</div>	
+			<button class="header-menu-button" onclick="location.href='https://www.eltharonstudios.se/index.html';">
+			<label class="Paint-label">Painting & Scenery</label></button>	
 		</div>
-		<!-- End of Header section -->
+		
+		<div class="header-follow-me">
+			<p id="follow-me-id"></p>
+			<button type="button" class="youTubeButton" 
+				onclick="location.href='https://www.youtube.com/channel/UC1VCYF0Cxq-N5NsingytkFg?view_as=subscriber';">
+				<i class="youtube-play"></i>
+			</button>
+		</div>	
+	</div>
 
-		<!-- Start content section -->
-		<div class="content">
-				<!--<img src="images/introimage.png" class="intro-background">-->
-
-				<video autoplay muted loop preload playsinline id="intro-video">
-					<source src="videos/intro_HD.MOV"/>
-				</video>
+	<!-- Start content section -->
+	<div class="content">
+			<video autoplay muted loop preload playsinline id="intro-video">
+				<source src="videos/intro_HD.MOV"/>
+			</video>
 				
-		  		<div id="intro-banner-container" class="style fade-in">
-		  			<div id="intro-date">2 Feb 2020</div>
-		  			<div id="intro-line"></div>
-		  			<div class="intro-arrow-container">	
-		  				<img src="images/arrow.png" id="intro-arrow">
-		  			</div>
-					<h1>Chaos Enters The Mortal World</h1>
-
-		  			<div class="intro-youtube-container">	
-						<iframe id="youtube-video" src="https://www.youtube.com/embed/JiCXcmKxlK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-						<p class="intro-text">
-							<strong>Sylvaneth-Stormcast Eternals
-								<br>VS<br>Khorne-Beastmen<br></strong>
-							<span class="intro-text-small">
-								2000 vs 2000 points (2 vs 2) pitched battle</span>
-						</p>
-		  			</div>
-		  			<div class="intro-button-container">
-		  				<button type="button" class="intro-goto-button" onclick="location.href='https://www.eltharonstudios.se/aos_menu_tab.html';">
-							View Full Battle Report
-						</button>
-					</div>
+			<div id="intro-banner-container" class="style fade-in">
+				<div id="intro-date">2 Feb 2020</div>
+		  		<div id="intro-line"></div>
+		  		<div class="intro-arrow-container">	
+		  			<img src="images/arrow.png" id="intro-arrow">
+		  		</div>
+				<h1>Chaos Enters The Mortal World</h1>
+		  		<div class="intro-youtube-container">	
+					<iframe id="youtube-video" src="https://www.youtube.com/embed/JiCXcmKxlK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>	
+					</iframe>
+					<p class="intro-text">
+						<strong>Sylvaneth-Stormcast Eternals
+							<br>VS<br>Khorne-Beastmen<br></strong>
+						<span class="intro-text-small">
+							2000 vs 2000 points (2 vs 2) pitched battle</span>
+					</p>
+	  			</div>
+	  			<div class="intro-button-container">
+	  				<button type="button" class="intro-goto-button" onclick="location.href='https://www.eltharonstudios.se/aos_menu_tab.html';">
+						View Full Battle Report
+					</button>
 				</div>
+			</div>
 		</div>
 
 		<!-- Start footer section -->
@@ -89,7 +85,6 @@
 </html>
 
 <script>
-	//var aosVideos = ["https://www.youtube.com/embed/wwInluOrn0E", "https://www.youtube.com/embed/nqVes4EnGWM", "https://www.youtube.com/embed/xd5b5dQOUjk", "https://www.youtube.com/embed/aq73sZPq2-Q"];
 
 	$(document).ready(function() {
 
@@ -118,23 +113,6 @@
 		$("#open-footer").click(function() {
   			alert()
 		});
-
-
-		//$("input:radio:first").attr('checked', true);
-
-		/*$("input[type='radio']").click(function(){
-
-            var radioValue = $("input[name='battleForm']:checked").val();
-            if(radioValue == "Age of Sigmar") {
-            	$('#aosFeed').show();
-            	$('#whfFeed').hide();
-            	$('.bImage').css("background-image", "url(./images/IMG_BELAKOR.jpg)");
-            } else if (radioValue == "Warhammer Fantasy 8th") {
-            	$('#aosFeed').hide();
-            	$('#whfFeed').show();
-            	$('.bImage').css("background-image", "url(./images/IMG_BLOODTH.jpg)");
-            }
-        });*/
 		
 	});
 

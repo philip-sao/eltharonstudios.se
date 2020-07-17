@@ -135,22 +135,28 @@ html, body {
 
 
 
-/* ------------ Menubar section ------------ */
+/* ------------ Menubar / Tabs section ------------ */
 
 
-
+ul {
+    list-style-type: none;
+}
 
 .menubar {
   top: 100px;
   width: 100%;
   background-color: #404040;
   position: sticky;
-  overflow: auto;
+  /*overflow: auto;*/
   transition: 0.4s; 
   text-align: center;
-  height: 50px;
+  /*height: 50px;*/
   padding: 15px;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  user-select: none;
 }
 
 .menubar-link {
@@ -158,7 +164,8 @@ html, body {
 }
 
 .menubar a {
-  padding: 18px 2% 18px 2%;
+  /*padding: 18px 2% 18px 2%;*/
+  padding: 15px 16px 16px 20px;
   text-decoration: none;
 }
  
@@ -174,7 +181,11 @@ html, body {
   color: white;
 }
 
-/* Menu bar MOBILE SOLUTION */
+.menubar a:focus {
+  outline: none;
+}
+
+/* Menubar / Tabs MOBILE SOLUTION */
 
 @media screen and (max-width: 980px) {
 
@@ -183,7 +194,8 @@ html, body {
     height: auto;
     position: fixed;
     font-size: small;
-    padding: 10px;
+    padding: 0;
+    margin: 0;
   }
   .menubar a {
     float: left;
@@ -265,21 +277,6 @@ div.content {
   border-radius: 5px;
 }
 
-#to-top-button-id {
-  position: fixed;
-  bottom: 68px;
-  right: 14%;
-  border: none;
-  padding: 15px;
-  background-image: linear-gradient(to right, #333333 0%, #666666 71%);
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  opacity: 0;
-  box-shadow: 4px 4px 4px #888888;
-  z-index: 99;
-}
-
 .video-frame-class {
   width: 80%;
   height: 80%;
@@ -287,9 +284,24 @@ div.content {
   position: fixed;
   top: 10%;
   border: none;
-  box-shadow: 4px 4px 4px 4px #888888;
+  box-shadow: 2px 2px 6px 2px #888888;
   background: #888888;
   z-index: 150;
+}
+
+#to-top-button-id {
+  position: fixed;
+  bottom: 68px;
+  right: 14%;
+  border: solid white 1px;
+  padding: 15px;
+  background-image: linear-gradient(to right, #333333 0%, #666666 71%);
+  color: white;
+  /*cursor: pointer;*/
+  border-radius: 5px;
+  opacity: 0;
+  /*box-shadow: 4px 4px 4px #888888;*/
+  z-index: 99;
 }
 
 
@@ -298,7 +310,7 @@ div.content {
 @media screen and (max-width: 980px) {
 
   div.content {
-    margin: 190px 10% 0 0;
+    margin: 170px 10% 0 0;
     width: 100%;
   }
 
@@ -330,6 +342,10 @@ div.content {
     font-size: x-small;
   }
 
+  .video-frame-class {
+    height: 60%;
+  }
+
   #to-top-button-id {
     position: fixed;
     bottom: 12px;
@@ -338,10 +354,6 @@ div.content {
     padding: 8px;
     width: 50px;
     font-size: xx-small;
-  }
-
-  .video-frame-class {
-    height: 60%;
   }
 
 }
