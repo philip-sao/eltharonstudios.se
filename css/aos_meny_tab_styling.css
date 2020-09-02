@@ -13,7 +13,8 @@ html, body {
 .header-bar {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 1000;
+  padding: 0 10%;
   width: 100%;
   background-color: white;
   display: flex;
@@ -36,7 +37,7 @@ html, body {
 }
 
 .header-menu label {
-  padding: 15px 55px;
+  padding: 15px 70px;
   border: ridge 1px;
 }
 
@@ -98,6 +99,10 @@ html, body {
 
 @media screen and (max-width: 980px) {
 
+  .header-bar {
+    padding: 0;
+  }
+
   .header-menu {
     display: contents;
   }
@@ -108,7 +113,7 @@ html, body {
   }
 
   .header-menu label {
-    padding: 11px 8px;
+    padding: 15px 8px;
     border: none;
     font-size: x-small;
     background-color: rgba(0, 0, 0, 0.1);
@@ -215,7 +220,7 @@ ul {
 
 
 div.content {
-  margin: 100px 20% 0 20%;
+  margin: 100px 5% 0 5%;
 }
 
 .content-title {
@@ -310,7 +315,7 @@ div.content {
 #to-top-button-id {
   position: fixed;
   bottom: 68px;
-  right: 14%;
+  right: 10%;
   border: solid white 1px;
   padding: 15px;
   background-image: linear-gradient(to right, #333333 0%, #666666 71%);
@@ -320,8 +325,12 @@ div.content {
   opacity: 0;
   /*box-shadow: 4px 4px 4px #888888;*/
   z-index: 99;
+  cursor: pointer;
 }
 
+#to-top-button-id:hover {
+  background-image: linear-gradient(to right, #33334F 0%, #66667D 71%)
+}
 
 /* Content MOBILE SOLUTION */
 
@@ -370,7 +379,7 @@ div.content {
   }
 
   .video-frame-class {
-    height: 60%;
+    height: 50%;
   }
 
   #to-top-button-id {
@@ -378,9 +387,9 @@ div.content {
     bottom: 30px;
     right: 7%;
     border: none;
-    padding: 8px;
-    width: 60px;
-    font-size: xx-small;
+    padding: 11px;
+    width: 125px;
+    font-size: small;
   }
 
 }
