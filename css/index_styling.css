@@ -112,7 +112,7 @@ html, body {
   }
 
   .header-menu label {
-    padding: 15px 8px;
+    padding: 20px 8px;
     /*border: ridge 1px;*/
     font-size: x-small;
     background-color: rgba(0, 0, 0, 0.1);
@@ -150,6 +150,7 @@ html, body {
   /*position: absolute;*/
   width: 100%;
   padding-top: 75px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Temporary static intro background 
@@ -415,7 +416,7 @@ h1 {
 }
 
 
-/* ----- Footer section ----- */
+/* ----- Footer section ----- 
 
 .footer {
   position: absolute;
@@ -437,9 +438,9 @@ h1 {
   color: #cccccc;
   transition: all .1s ease-in-out;
   cursor: pointer;
-}
+}*/
 
-/* --- Footer section MOBILE SOLUTION --- */ 
+/* --- Footer section MOBILE SOLUTION --- 
 
 @media (max-width: 980px) {
 
@@ -449,7 +450,7 @@ h1 {
     font-size: small;
   }
 
-}
+}*/ 
 
 /* ----- ANIMATIONS ----- */
 

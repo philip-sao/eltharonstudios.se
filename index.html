@@ -111,22 +111,22 @@
 		};
 
 		function headerResize() {
-			var hideArrow = document.getElementById("intro-arrow");
+			/*var hideArrow = document.getElementById("intro-arrow");*/
 			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 				document.getElementById("header-bar-id").style.height = "75px";  
-				hideArrow.style.visibility = "hidden";
+				/*hideArrow.style.visibility = "hidden";*/
 			} else {
 				document.getElementById("header-bar-id").style.height = "100px";
-				hideArrow.style.visibility = "visible";
+				/*hideArrow.style.visibility = "visible";*/
 			}
 		}
 
-		$( ".intro-arrow-container" ).click(function() {
+		/*$( ".intro-arrow-container" ).click(function() {
 	        window.scrollTo ( {
 	            top: 800,
 	            behavior:"smooth"
 	        });
-		});
+		});*/
 
 		$("#open-footer").click(function() {
   			alert()
