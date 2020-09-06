@@ -5,7 +5,7 @@
 	<title>Eltharon Studios</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/aos_meny_tab_styling.css">
-	<link rel="icon" href="images/logo.png">
+	<link rel="icon" href="images/logo_icon.png">
 	<script src="javascript/ajax-v-3-4-1-jquery.min.js"></script>
 	<!-- Loading on page landing -->
 	<script src="javascript/cloudflare-v-2-8-3.js"></script>
@@ -367,19 +367,19 @@
 			}
 		}
 
-		$(".intro-arrow-container").click(function() {
+		/*$(".intro-arrow-container").click(function() {
 	        window.scrollTo ( {
 	            top: 800,
 	            behavior:"smooth"
 	        });
-		});
+		});*/
 
 		$('.menubar-link').click(function() {
 			$('.menubar-link.active').removeClass('active');
         	$(this).addClass('active');
 		});
 
-		$("#to-top-button-id").click(function() {
+		$("#to-top-button-id, #tabs").click(function() {
 	        window.scrollTo ( {
 	            top: 0,
 	            /*behavior:"auto"*/
@@ -400,6 +400,7 @@
 		    mouseIsInside = false; 
 		});
 
+		/* Clicking outside frame will close window */
 		$("body").mouseup(function() { 
 			$('.video-frame-class').each(function(){
 				this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
@@ -407,7 +408,7 @@
 		    if(! mouseIsInside) $('.video-frame-class').hide();
 	    });
 
-		$( "#tabs" ).tabs();
+		$("#tabs").tabs();
 
 	});
 
