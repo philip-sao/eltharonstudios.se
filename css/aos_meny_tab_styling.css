@@ -365,11 +365,11 @@ div.content {
 
   .intro-text {
     position: absolute;
-    left: 9%;
+    left: 12%;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     height: 100px; /*height: 14.3%;*/
-    width: 50%;
+    width: 48%;
     padding: 2.5%;
     font-size: x-small;
   }
@@ -381,7 +381,7 @@ div.content {
   .intro-button {
     position: absolute;
     margin-top: 75px; /*top: 433px;*/
-    left: 23%;
+    left: 25%;
     background: linear-gradient(to right, #dc9014 0%, #f6e27e 50%, #dc9014 100%);
     width: 95px;
     border: none;
