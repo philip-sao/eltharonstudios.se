@@ -349,22 +349,23 @@
 	$(document).ready(function() {
 
 		window.onscroll = function() {
-			if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-				headerResize()
-			}
+			headerResize()
 		};
 
 		function headerResize() {
 			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-				document.getElementById("header-bar-id").style.height = "75px";  
-				document.getElementById("menubar-id").style.top = "75px";  
-
+				if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+					document.getElementById("header-bar-id").style.height = "75px";  
+					document.getElementById("menubar-id").style.top = "75px"; 
+				}
 				/*document.getElementById("to-top-button-id").style.transition = "opacity 0.3s ease";*/
 				document.getElementById("to-top-button-id").style.opacity = "1";
 			} else {
-				document.getElementById("header-bar-id").style.height = "100px";
-				document.getElementById("menubar-id").style.top = "100px"; 
-
+				if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+					document.getElementById("header-bar-id").style.height = "100px";
+					document.getElementById("menubar-id").style.top = "100px"; 
+				}
+				
 				document.getElementById("to-top-button-id").style.opacity = "0";
 			}
 		}
