@@ -81,7 +81,7 @@ html, body {
   border-radius: 25%;
   place-self: center;
   margin-left: 10px;
-  padding: 4px 11px 3px 13px;
+  padding: 4px 11px 4px 13px;
   cursor: pointer;
   transition: all .3s ease-in-out;
 }
@@ -208,10 +208,13 @@ html, body {
   cursor: pointer;
   box-shadow: 0px 0px 5px grey;
   border-radius: 5px;
+  letter-spacing: 0.2px;
 }
 
 .intro-goto-button:hover {
   background: linear-gradient(to right, #dc9014 0%, #efc90c 50%, #dc9014 100%);
+  /*text-decoration: underline;
+  zoom: 1.01;*/
 }
 
 

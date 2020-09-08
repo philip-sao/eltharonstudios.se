@@ -85,7 +85,7 @@ html, body {
   border-radius: 25%;
   place-self: center;
   margin-left: 10px;
-  padding: 4px 11px 3px 13px;
+  padding: 4px 11px 4px 13px;
   cursor: pointer;
   transition: all .3s ease-in-out;
 }
