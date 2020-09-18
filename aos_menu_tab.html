@@ -19,8 +19,8 @@
 	<script src="javascript/cloudflare-v-2-8-3.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<!-- JQuery slider -->
-	<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
-	<script src="javascript/jquery.swipeSlider.js"></script>
+	<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="javascript/jquery.swipeSlider.js"></script>-->
 	<script>
 		$(window).on("load", function() {
 			$(".se-pre-con").fadeOut("slow");;
@@ -390,11 +390,11 @@
 <script>
 
 	var mouseIsInside = false;
-	var previousLocation = 0; 
-	/* Enable slider only for mobile web */
+	//var previousLocation = 0; 
+	/* Enable slider only for mobile web 
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
 		var slider = $('#slider').swipeSlider();
-	}
+	}*/
 
 
 	function headerResize() {
@@ -413,7 +413,7 @@
 		}
 	}
 
-	/* Calls */
+	/* Calls 
 	function activateTabClassWhenSlide(index) { 
     	console.log("activate tab class index: " + index)
     	if (previousLocation !== index) {
@@ -431,7 +431,7 @@
     	} else {
     		console.log("byt inte class")
     	}
-	}
+	}*/
 
 
 	$(document).ready(function() {
@@ -482,10 +482,11 @@
 		    if(! mouseIsInside) $('.video-frame-class').hide();
 	    });
 
-		/* Disable tabs if mobile device - caused slider to break */
+		$("#tabs").tabs();
+		/* Disable tabs if mobile device - caused slider to break 
 		if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
 			$("#tabs").tabs();
-		}
+		}*/
 
 	});
 
