@@ -17,10 +17,13 @@
 	<script src="javascript/ajax-v-3-4-1-jquery.min.js"></script>
 	<!-- Loading on page landing -->
 	<script src="javascript/cloudflare-v-2-8-3.js"></script>
+	<!-- JQuery slider (and more) -->
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="javascript/prrple.slider.js"></script>
+	<script src="javascript/jquery.touchSwipe.1.6.min.js"></script>
+	<!-- Making tabs work (and more)  -->
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<!-- JQuery slider -->
-	<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="javascript/jquery.swipeSlider.js"></script>-->
+
 	<script>
 		$(window).on("load", function() {
 			$(".se-pre-con").fadeOut("slow");;
@@ -69,23 +72,29 @@
 
 		<!-- Start content section descending timeline -->
 
-		<!--<div id="slider">
-		  <div>
-		    <div class="slide-1">
-		      Slide 1
-		    </div>
-		    <div class="slide-2">
-		      Slide 2
-		    </div>
-		    <div class="slide-3">
-		      Slide 3
+		<!--<div class="slider">
+		  <div class="slider_area">
+		    <div class="slides">
+		      <div class="slide">
+		        <div class="slidetitle">1</div>
+		      </div>
+		      <div class="slide">
+		        <div class="slidetitle">2</div>
+		      </div>
+		      <div class="slide">
+		        <div class="slidetitle">3</div>
+		      </div>
 		    </div>
 		  </div>
+		  <div class="slider_nav"></div>
+		  <a class="slide_left">Left</a>
+		  <a class="slide_right">Right</a>
 		</div>-->
 
-		<div id="slider">
-			<div>
-		<div class="content" id="2-Feb-2020">
+		<div id="page-content" class="slider">
+			<div class="slider_area">
+			<div class="slides">
+		<div class="content slide" id="2-Feb-2020">
 			<div class="content-title">
 				Sylvaneth-Stormcast Eternals 
 				<span class="VS">VS</span> 
@@ -124,7 +133,7 @@
 			</div>
 		</div>
 
-		<div class="content" id="18-Jan-2020">
+		<div class="content slide" id="18-Jan-2020">
 			<div class="content-title">
 				Sylvaneth
 				<span class="VS">VS</span> 
@@ -163,7 +172,7 @@
 			</div>
 		</div>
 
-		<div class="content" id="15-Dec-2019">
+		<div class="content slide" id="15-Dec-2019">
 			<div class="content-title">
 				Beastmen 
 				<span class="VS">VS</span> 
@@ -202,7 +211,7 @@
 			</div>
 		</div>
 
-		<div class="content" id="2-Nov-2019">
+		<div class="content slide" id="2-Nov-2019">
 			<div class="content-title">
 				Skaven 
 				<span class="VS">VS</span> 
@@ -241,7 +250,7 @@
 			</div>
 		</div>
 
-		<div class="content" id="27-Oct-2019">
+		<div class="content slide" id="27-Oct-2019">
 			<div class="content-title">
 				Beastmen 
 				<span class="VS">VS</span> 
@@ -280,7 +289,7 @@
 			</div>
 		</div>
 
-		<div class="content" id="6-Oct-2019">
+		<div class="content slide" id="6-Oct-2019">
 			<div class="content-title">
 				Skaven
 				<span class="VS">VS</span> 
@@ -320,34 +329,18 @@
 		</div>
 		</div>
 		</div>
+		</div>
 	</div>
-
-	<!--<div id="slider">
-		  <div>
-		    <div class="slide-1">
-		      <div>Slide 1</div>
-		    </div>
-		    <div class="slide-2">
-		      <div>Slide 2</div>
-		    </div>
-		    <div class="slide-3">
-		      <div id="slide">Slide 3</div>
-		    </div>
-		    <div class="slide-4">
-		      <div>Slide 4</div>
-		    </div>
-		  </div>
-	</div>-->
 							
 	<button type="button" id="to-top-button-id">
 		Back To The Top
 	</button>
 
-	<!-- Start footer section -->
+	<!-- Start footer section 
 	<div class="footer">
 		<p id="open-footer">About us</p> 
 		<p id="open-footer">FAQ</p> 
-	</div>
+	</div>-->
 		
 		<!--<div id="aosFeed" class="style fade-in">
 
@@ -390,12 +383,7 @@
 <script>
 
 	var mouseIsInside = false;
-	//var previousLocation = 0; 
-	/* Enable slider only for mobile web 
-	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-		var slider = $('#slider').swipeSlider();
-	}*/
-
+	var previousLocation = 0; 
 
 	function headerResize() {
 		if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -413,7 +401,7 @@
 		}
 	}
 
-	/* Calls 
+	/* To change active state on slide  */
 	function activateTabClassWhenSlide(index) { 
     	console.log("activate tab class index: " + index)
     	if (previousLocation !== index) {
@@ -428,10 +416,8 @@
 				}
 			});
     		previousLocation = index;
-    	} else {
-    		console.log("byt inte class")
     	}
-	}*/
+	}
 
 
 	$(document).ready(function() {
@@ -454,7 +440,6 @@
 
 		/* Scroll to top when clicked */
 		$("#to-top-button-id, .menubar-link").click(function() {
-			//$(window).scrollTop(0); 
 			$('html, body').animate({scrollTop: '0px'}, 300);
 		});
 
@@ -482,11 +467,103 @@
 		    if(! mouseIsInside) $('.video-frame-class').hide();
 	    });
 
-		$("#tabs").tabs();
-		/* Disable tabs if mobile device - caused slider to break 
+		/* Disable tabs if mobile device - caused slider to break */
 		if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
 			$("#tabs").tabs();
-		}*/
+		}
+
+		/* Activate slider functionality for mobile devices */
+		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+			$('.slider').prrpleSlider({
+
+			  // define slider area element
+			  el_slider_area:   '.slider_area',   
+			  // define slides element
+			  el_slides:      '.slides',      
+			  // define slide elements
+			  el_slide:     '.slide',     
+			  // define left arrow element
+			  el_left:      '.slide_left',    
+			  // define right arrow element
+			  el_right:     '.slide_right', 
+
+			  // define nav dot wrapper  
+			  //el_dotwrap:     '.slider_dotwrap',  
+
+			  // define nav dots
+			  //el_dot:       '.slider_dot',    
+
+			  // define arrow wrapper
+			  //el_controls:    '.slider_controls', 
+
+			  // define play button
+			  //el_play:      '.slider_play',   
+
+			  // define pause button
+			  //el_pause:     '.slider_pause',  
+			  
+			  // define specific width
+			  width:        null,       
+			  // define specific height
+			  height:       '100%',       
+			  // spacing between slides
+			  spacing:      0,          
+			  // how many slides in viewport
+			  multiple:     1,          
+			  // enable swiping?
+			  swiping:      true,      
+			  // use rich swiping? 
+			  richSwiping:    true,       
+			  // horizontal or vertical
+			  direction:      'horizontal', 
+			  // fade or slide  
+			  transition:     'fade',
+			  // how long to change slides
+			  transitionTime:   300,      
+
+			  // requires jquery easing plugin  
+			  //easing:       'swing',      
+
+			  // whether or not to infinitely loop the slider
+			  loop:       false,   
+			  // whether or not a looping slider should seamlessly rotate     
+			  loopSeamless:   true,           
+
+			  // use css transforms?
+			  //csstransforms:    false,        
+			  
+			  // play slider automatically?
+			  //autoPlay:     false,        
+
+			  // how often to automatically switch between slides
+			  //autoPlayInterval: 4000,       
+
+			  // pause slider after interacting?
+			  pauseOnClick:   true,       
+			  // resize slider on browser resize
+			  windowsize:     false,    
+			  // if arrows don't exist, dynamically add them
+			  addArrows:      false,       
+			  // if dots don't exist, dynamically add them    
+			  addDots:      false,       
+
+			  // whether to hide arrows if there's only one slide e.g. for dynamically loaded content
+			  //hideArrows:     true,      
+
+			  // add test to dots (using data-nav attribute)
+			  //textDots:     false,        
+
+			  // the slide number to start on 
+			  firstSlide:     1,          
+
+			  // callback function after a slide changes
+			  //callback:     null,       
+
+			  // callback function after a slide changes and animation completes
+			  //callback_end:   null     
+
+			});
+		}
 
 	});
 

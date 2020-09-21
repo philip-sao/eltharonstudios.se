@@ -217,9 +217,9 @@ ul {
     padding: 0;
     margin: 0;
     
-    /* Dirty fix disable tabs 
+    /* Dirty fix disable tabs */
     pointer-events: none;
-    cursor: default;*/
+    cursor: default;
   }
   .menubar a {
     float: left;
@@ -239,6 +239,10 @@ ul {
   /*position: sticky; ???? */
 }
 
+#page-content {
+  position: relative;
+  top: 100px;
+}
 
 div.content {
   /*margin: 100px 5% 0 5%;*/
@@ -500,33 +504,4 @@ if it's not present, don't show loader */
   height: 100%;
   z-index: 9999;
   background: url(./images/preloader.gif) center no-repeat #fff;
-}
-
-
-
-
-/* JQuery slider plugin */
-
-#slider {
-  position: relative;
-  top: 100px;
-}
-
-.ss-slider {
-  height: 100%;
-  overflow: hidden;
-}
-
-.ss-slider > .ss-slides {
-  height: 100%;
-  overflow: hidden;
-  user-select: none;
-  width: 100%;
-}
-
-.ss-slider > .ss-slides > .ss-slide {
-  float: left;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
 }
