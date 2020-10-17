@@ -7,6 +7,13 @@ html, body {
 	margin: 0;
 }
 
+/* Only allow up and down scroll in MW ?? */
+@media screen and (max-width: 980px) {
+  body {
+    touch-action: pan-x pan-y;
+  }
+}
+
 /* ------------ Header Bar Section ------------ */
 
 .header-bar {
@@ -19,8 +26,8 @@ html, body {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  /*border-bottom: solid 1px darkgoldenrod;*/
-  /*box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 3px 2px rgba(0,0,0,.24);*/
+  border-bottom: solid 1px darkgoldenrod;
+  box-shadow: 0 1px 0px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
   height: 100px;
   transition: 0.4s;
   background-color: #3D3F3F;
@@ -99,6 +106,10 @@ html, body {
   transform: scale(1.05);
 }
 
+#mw-menubar {
+  display: none;
+}
+
 /* --- Header bar MOBILE SOLUTION --- */ 
 
 @media (max-width: 980px) {
@@ -113,7 +124,8 @@ html, body {
   }
 
   .header-menu {
-    display: contents;
+    display: none;
+    /*display: contents;*/
   }
 
   .header-menu-button {
@@ -133,12 +145,13 @@ html, body {
   }
 
   #logo {
-    width: 6rem;
-    padding: 1rem 0rem 1rem 0.4rem;
+    width: 8rem;
+    padding: 1rem 0rem 1rem 1rem;
   }
 
   .youTubeButton {
     padding: 0px 4px 0px 7px;
+    display: none; /* change to some other nav */
   }
 
   .youtube-play {
@@ -147,8 +160,39 @@ html, body {
     border-left: 9px solid white;
   }
 
-}
+  /* Mobile Menu */
 
+  #mw-menubar {
+    display: block;
+    width: 85px;
+    margin-right: 20px;
+  }
+
+  .mobile-container {
+    display: inline-block;
+    position: fixed;
+    top: 120px;
+    z-index: 1000;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #mobile-menu-dropdown {
+    display: none;
+    width: 100%
+  }
+
+  .mobile-menu-button {
+    border: unset;
+    background: none;
+    color: white;
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid white;
+    letter-spacing: 2px;
+  }
+
+}
 
 
 /* ------------ Content section ------------ */
@@ -175,6 +219,20 @@ html, body {
   user-select: none;
 }
 
+.intro-header {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+#intro-text {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
 #intro-date {
   color: white;
   font-family: Anonymous Pro !important;
@@ -187,15 +245,9 @@ html, body {
   margin: 8px 30% 14px;
 }
 
-.intro-text {
-  color: white;
-  text-align: center;
-  font-size: 20px;
-}
-
-.intro-text-small {
+/*.intro-text-small {
   font-size: small;
-}
+}*/
 
 .intro-button-container {
   text-align: center;
@@ -206,7 +258,7 @@ html, body {
   width: 200px;
   border: none;
   padding: 15px;
-  margin-top: 25px;
+  margin-top: 15px;
   cursor: pointer;
   box-shadow: 0px 0px 5px grey;
   border-radius: 5px;
@@ -217,6 +269,10 @@ html, body {
   background: linear-gradient(to right, #dc9014 0%, #efc90c 50%, #dc9014 100%);
   /*text-decoration: underline;
   zoom: 1.01;*/
+}
+
+.intro-content-container {
+  display: none;
 }
 
 
@@ -230,7 +286,7 @@ html, body {
 
   #intro-video {
     width: 100%;
-    padding: 120px 0 20px 0;
+    padding: 120px 0 15px 0;
   }
 
   #intro-banner-container {
@@ -249,22 +305,86 @@ html, body {
     font-size: 12px;
   }
 
+  .intro-header {
+    color: white;
+    margin: 0 0 15px 0;
+  }
+
+  #intro-text {
+    display: none;
+  }
+
   #intro-date {
     font-size: small;
     color: white;
   }
 
-  .intro-text {
-    color: white;
-  }
-
-  .intro-button-container {
-    
+  #intro-line {
+    margin: 8px 40% 14px;
   }
 
   .intro-goto-button {
-    margin-top: 5px;
-    margin-bottom: 25px;
+    /*margin-top: 0;
+    margin-bottom: 50px;
+    padding: 7px;*/
+    display: none;
+  }
+
+  .intro-content-container {
+    display: block;
+    /*background-color: lightgray;*/
+  }
+
+  .intro-content-container-text {
+    /*margin: 0;
+    padding: 50px 10px 0 10px;
+    text-align: center;*/
+    letter-spacing: 4px;
+    font-family: fantasy !important;
+    font-size: 40px;
+    color: gray;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;  
+    right: 0;
+    text-align: center;
+  }
+
+  .intro-goto-button-mw {
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 100px;
+    background: linear-gradient(to right, #dc9014 0%, #f6e27e 50%, #dc9014 100%);
+    width: 200px;
+    border: none;
+    padding: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 5px;
+    letter-spacing: 0.2px;
+  }
+
+  .intro-content-grid {
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;*/
+    padding: 1% 2% 20% 2%;
+  }
+
+  /*.intro-grid-content {
+    grid-column: 1 / span 2;
+  }*/
+
+  #intro-grid-media {
+    width: 100%;
+    border-radius: 5px;
   }
 
 }
