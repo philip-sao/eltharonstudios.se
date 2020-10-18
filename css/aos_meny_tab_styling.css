@@ -170,7 +170,7 @@ ul {
   text-align: center;
   /*height: 50px;*/
   padding: 15px;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -217,9 +217,9 @@ ul {
     padding: 0;
     margin: 0;
     
-    /* Dirty fix disable tabs */
+    /* Dirty fix disable tabs 
     pointer-events: none;
-    cursor: default;
+    cursor: default;*/
   }
   .menubar a {
     float: left;
@@ -237,6 +237,10 @@ ul {
 
 #tabs {
   /*position: sticky; ???? */
+}
+
+#mw-swipe-icon {
+  display: none;
 }
 
 #page-content {
@@ -362,6 +366,36 @@ div.content {
 
 @media screen and (max-width: 980px) {
 
+  #mw-swipe-icon {
+    display: block;
+    width: 24px;
+    position: absolute;
+    z-index: 1000;
+    right: 15px;
+    top: 170px;
+    z-index: 800;
+  }
+
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce { 
+    0%, 20%, 40%, 60%, 80%, 100% {
+      transform: translateX(0);}
+    50% {
+      transform: translateX(5px);}
+  } 
+
+  /*@keyframes move {
+      50% {
+          bottom: 10%;
+      }
+      100% {
+          bottom: 0;
+      }
+  }*/
+
   div.content {
     margin: 65px 0 0 0;
     width: 100%;
@@ -369,7 +403,7 @@ div.content {
 
   .content-title {
     font-size: 20px;
-    padding: 0 3%;
+    padding: 0 6% 4%;
   }
 
   .VS {
@@ -421,6 +455,7 @@ div.content {
     padding: 11px;
     width: 125px;
     font-size: small;
+    height: 45px;
   }
 
 }

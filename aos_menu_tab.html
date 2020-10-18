@@ -19,8 +19,8 @@
 	<script src="javascript/cloudflare-v-2-8-3.js"></script>
 	<!-- JQuery slider (and more) -->
 	<script src="javascript/jquery-1.11.3.min.js"></script>
-	<script src="javascript/prrple.slider.js"></script>
-	<script src="javascript/jquery.touchSwipe.1.6.min.js"></script>
+	<!--<script src="javascript/prrple.slider.js"></script>
+	<script src="javascript/jquery.touchSwipe.1.6.min.js"></script>-->
 	<!-- Making tabs work (and more)  -->
 	<script src="javascript/jquery-ui.js"></script>
 
@@ -71,30 +71,8 @@
 		</ul>
 
 		<!-- Start content section descending timeline -->
-
-		<!--<div class="slider">
-		  <div class="slider_area">
-		    <div class="slides">
-		      <div class="slide">
-		        <div class="slidetitle">1</div>
-		      </div>
-		      <div class="slide">
-		        <div class="slidetitle">2</div>
-		      </div>
-		      <div class="slide">
-		        <div class="slidetitle">3</div>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="slider_nav"></div>
-		  <a class="slide_left">Left</a>
-		  <a class="slide_right">Right</a>
-		</div>-->
-
-		<div id="page-content" class="slider">
-			<div class="slider_area">
-			<div class="slides">
-		<div class="content slide" id="2-Feb-2020">
+		<div id="page-content">
+		<div class="content" id="2-Feb-2020">
 			<div class="content-title">
 				Sylvaneth-Stormcast Eternals 
 				<span class="VS">VS</span> 
@@ -172,7 +150,7 @@
 			</div>
 		</div>
 
-		<div class="content slide" id="15-Dec-2019">
+		<div class="content" id="15-Dec-2019">
 			<div class="content-title">
 				Beastmen 
 				<span class="VS">VS</span> 
@@ -211,7 +189,7 @@
 			</div>
 		</div>
 
-		<div class="content slide" id="2-Nov-2019">
+		<div class="content" id="2-Nov-2019">
 			<div class="content-title">
 				Skaven 
 				<span class="VS">VS</span> 
@@ -250,7 +228,7 @@
 			</div>
 		</div>
 
-		<div class="content slide" id="27-Oct-2019">
+		<div class="content" id="27-Oct-2019">
 			<div class="content-title">
 				Beastmen 
 				<span class="VS">VS</span> 
@@ -289,7 +267,7 @@
 			</div>
 		</div>
 
-		<div class="content slide" id="6-Oct-2019">
+		<div class="content" id="6-Oct-2019">
 			<div class="content-title">
 				Skaven
 				<span class="VS">VS</span> 
@@ -326,8 +304,6 @@
 				<div class="grid-content-wide">
 					<img src="images/aos/hero-slash-furnace.png" id="grid-content-media"></div>
 			</div>
-		</div>
-		</div>
 		</div>
 		</div>
 	</div>
@@ -401,7 +377,7 @@
 		}
 	}
 
-	/* To change active state on slide  */
+	/* To change active state on slide  
 	function activateTabClassWhenSlide(index) { 
     	console.log("activate tab class index: " + index)
     	if (previousLocation !== index) {
@@ -417,7 +393,7 @@
 			});
     		previousLocation = index;
     	}
-	}
+	}*/
 
 
 	$(document).ready(function() {
@@ -467,12 +443,14 @@
 		    if(! mouseIsInside) $('.video-frame-class').hide();
 	    });
 
-		/* Disable tabs if mobile device - caused slider to break */
+	    $("#tabs").tabs();
+
+		/* Disable tabs if mobile device - caused slider to break 
 		if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
 			$("#tabs").tabs();
-		}
+		}*/
 
-		/* Activate slider functionality for mobile devices */
+		/* Activate slider functionality for mobile devices 
 		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
 			$('.slider').prrpleSlider({
 
@@ -563,7 +541,7 @@
 			  //callback_end:   null     
 
 			});
-		}
+		}*/
 
 	});
 

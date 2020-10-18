@@ -87,7 +87,7 @@
 				</div>
 			</div>
 
-			<!-- Big image -->
+			<!-- Mobile Web Big image -->
 			<div class="intro-content-container">
 				<p class="intro-content-container-text"> JOIN THE FIGHT </p>
 				<button type="button" class="intro-goto-button-mw" onclick="location.href='https://www.eltharonstudios.se/aos_menu_tab.html';">
@@ -99,31 +99,6 @@
 					</div>
 
 			</div>
-				
-			<!-- OLD INTRO --> 
-			<!--<div id="intro-banner-container" class="style fade-in">
-				<div id="intro-date">2 Feb 2020</div>
-		  		<div id="intro-line"></div>
-		  		<div class="intro-arrow-container">	
-		  			<img src="images/arrow.png" id="intro-arrow">
-		  		</div>
-				<h1>Chaos Enters The Mortal World</h1>
-		  		<div class="intro-youtube-container">	
-					<iframe id="youtube-video" src="https://www.youtube.com/embed/JiCXcmKxlK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>	
-					</iframe>
-					<p class="intro-text">
-						<strong>Sylvaneth-Stormcast Eternals
-							<br>VS<br>Khorne-Beastmen<br></strong>
-						<span class="intro-text-small">
-							2000 vs 2000 points (2 vs 2) pitched battle</span>
-					</p>
-	  			</div>
-	  			<div class="intro-button-container">
-	  				<button type="button" class="intro-goto-button" onclick="location.href='https://www.eltharonstudios.se/aos_menu_tab.html';">
-						View Full Battle Report
-					</button>
-				</div>
-			</div>-->
 		</div>
 
 		<!-- Start footer section 
@@ -139,10 +114,14 @@
 
 	$(document).ready(function() {
 
+		/* Mobile Web menu toggle on click */
 		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
 			$("#mw-menubar").toggle(
-				function(){$("#mobile-menu-dropdown").css({"display": "inline-grid"});},
-				function(){$("#mobile-menu-dropdown").css({"display": "none"});
+				function() {
+					$("#mobile-menu-dropdown").css({"display": "inline-grid"});
+				},
+				function() {
+					$("#mobile-menu-dropdown").css({"display": "none"});
 			});
 		}
 

@@ -188,7 +188,7 @@ html, body {
     color: white;
     text-align: left;
     padding: 15px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid darkgoldenrod;
     letter-spacing: 2px;
   }
 
@@ -235,7 +235,7 @@ html, body {
 
 #intro-date {
   color: white;
-  font-family: Anonymous Pro !important;
+  /*font-family: Anonymous Pro !important;*/
   text-align: center;
 }
 
