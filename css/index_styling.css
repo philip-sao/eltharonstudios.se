@@ -7,7 +7,7 @@ html, body {
 	margin: 0;
 }
 
-/* Only allow up and down scroll in MW ?? */
+/* Only allow up and down scroll in MW */
 @media screen and (max-width: 980px) {
   body {
     touch-action: pan-x pan-y;
@@ -120,7 +120,7 @@ html, body {
 
   .header-bar {
     padding: 0;
-    height: 120px;
+    height: 90px;
   }
 
   .header-menu {
@@ -171,10 +171,10 @@ html, body {
   .mobile-container {
     display: inline-block;
     position: fixed;
-    top: 120px;
+    top: 90px;
     z-index: 1000;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   #mobile-menu-dropdown {
@@ -286,7 +286,7 @@ html, body {
 
   #intro-video {
     width: 100%;
-    padding: 120px 0 15px 0;
+    padding: 90px 0 15px 0;
   }
 
   #intro-banner-container {

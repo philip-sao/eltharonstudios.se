@@ -15,10 +15,14 @@
 	<link rel="stylesheet" type="text/css" href="css/aos_meny_tab_styling.css">
 	<link rel="icon" href="images/logo_icon.png">
 	<script src="javascript/ajax-v-3-4-1-jquery.min.js"></script>
+	<!-- For JQuery toggle -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 	<!-- Loading on page landing -->
 	<script src="javascript/cloudflare-v-2-8-3.js"></script>
 	<!-- JQuery slider (and more) -->
-	<script src="javascript/jquery-1.11.3.min.js"></script>
+
+	<!--<script src="javascript/jquery-1.11.3.min.js"></script>-->
+
 	<!--<script src="javascript/prrple.slider.js"></script>
 	<script src="javascript/jquery.touchSwipe.1.6.min.js"></script>-->
 	<!-- Making tabs work (and more)  -->
@@ -57,6 +61,10 @@
 				<i class="youtube-play"></i>
 			</button>
 		</div>	
+		<!-- Mobile Web menu icon -->
+		<div>
+			<img src="images/mw_menubar.png" id="mw-menubar">
+		</div>
 	</div>
 
 	<!-- Start menubar section -->
@@ -70,6 +78,15 @@
 			<li><a href="#6-Oct-2019" class="menubar-link">6-Oct-2019</a></li>
 		</ul>
 
+		<!-- Mobile Web menubar -->
+		<div class="mobile-container">
+			<div id="mobile-menu-dropdown" class="fade-in">
+				<button class="mobile-menu-button" onclick="location.href='https://www.eltharonstudios.se/aos_menu_tab.html';">Age of Sigmar
+				<button class="mobile-menu-button" onclick="location.href='https://www.eltharonstudios.se/index.html';">Fantasy 8th
+				<button class="mobile-menu-button" onclick="location.href='https://www.eltharonstudios.se/index.html';">Painting & Scenery
+			</div>
+		</div>
+
 		<!-- Start content section descending timeline -->
 		<div id="page-content">
 		<div class="content" id="2-Feb-2020">
@@ -80,7 +97,7 @@
 			</div>
 			<div class="grid-container">
 				<div class="grid-content-wide">
-					<img src="images/aos/intro-sylvaneth.png" id="grid-content-media">
+					<img src="images/aos/intro-sylvaneth.png" class="grid-content-media">
 				</div>
 				<div class="grid-content-wide">
 					<p class="intro-text">
@@ -92,22 +109,23 @@
 					<button type="button" class="intro-button" data-link="https://www.youtube.com/embed/JiCXcmKxlK0?enablejsapi=1&version=3&playerapiid=ytplayer">
 					<strong>See full video</strong></button>
 					<video autoplay muted loop preload playsinline 
-						id="grid-content-media"><source src="videos/intro_HD.MOV"/>
+						class="grid-content-media"><source src="videos/intro_HD.MOV"/>
 					</video>
 					<div class="video-frame"></div>
 				</div>
 				<div class="grid-content-wide">
-					<img src="images/aos/chaos-beasts.JPG" id="grid-content-media"></div>
+					<img src="images/aos/chaos-beasts.JPG" class="grid-content-media"></div>
+				<!--<div class="grid-content-right">Chaos join together<br></div>-->
 				<div class="grid-content-wide">
-					<img src="images/aos/sylvaneth.png" id="grid-content-media"></div>
-				<div class="grid-content-wide">
-					<img src="images/aos/ss-army.png" id="grid-content-media"></div>
-				<div class="grid-content-wide">
-					<img src="images/aos/k-b-army.png" id="grid-content-media"></div>
-				<div class="grid-content-wide">
-					<img src="images/aos/chaos-lords.png" id="grid-content-media"></div>
-				<div class="grid-content-wide">
-					<img src="images/aos/stormcasts.png" id="grid-content-media"></div>
+					<img src="images/aos/sylvaneth.png" class="grid-content-media"></div>
+				<div class="grid-content-left">
+					<img src="images/aos/ss-army.png" class="grid-content-media"></div>
+				<div class="grid-content-right">
+					<img src="images/aos/k-b-army.png" class="grid-content-media"></div>
+				<div class="grid-content-left">
+					<img src="images/aos/chaos-lords.png" class="grid-content-media"></div>
+				<div class="grid-content-right">
+					<img src="images/aos/stormcasts.png" class="grid-content-media"></div>
 			</div>
 		</div>
 
@@ -119,7 +137,7 @@
 			</div>
 			<div class="grid-container">
 				<div class="grid-content-wide">
-					<img src="images/aos/intro18th.png" id="grid-content-media">
+					<img src="images/aos/intro18th.png" class="grid-content-media">
 				</div>
 				<div class="grid-content-wide">
 					<p class="intro-text">
@@ -131,22 +149,22 @@
 					<button type="button" class="intro-button" data-link="https://www.youtube.com/embed/dpJgwMVCX-g?enablejsapi=1&version=3&playerapiid=ytplayer">
 					<strong>See full video</strong></button>
 					<video autoplay muted loop preload playsinline 
-						id="grid-content-media"><source src="videos/aos/intro-video-18jan.MOV"/>
+						class="grid-content-media"><source src="videos/aos/intro-video-18jan.MOV"/>
 					</video>
 					<div class="video-frame"></div>
 				</div>
 				<div class="grid-content-wide">
-					<img src="images/aos/sylva-boss.png" id="grid-content-media"></div>
+					<img src="images/aos/sylva-boss.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/sylvaneth-warriors.png" id="grid-content-media"></div>
+					<img src="images/aos/sylvaneth-warriors.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/beast-daemon.png" id="grid-content-media"></div>
+					<img src="images/aos/beast-daemon.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/slaughter.png" id="grid-content-media"></div>
+					<img src="images/aos/slaughter.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/giant.png" id="grid-content-media"></div>
+					<img src="images/aos/giant.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/sylva-small.png" id="grid-content-media"></div>
+					<img src="images/aos/sylva-small.png" class="grid-content-media"></div>
 			</div>
 		</div>
 
@@ -158,7 +176,7 @@
 			</div>
 			<div class="grid-container">
 				<div class="grid-content-wide">
-					<img src="images/aos/intro-fight.png" id="grid-content-media">
+					<img src="images/aos/intro-fight.png" class="grid-content-media">
 				</div>
 				<div class="grid-content-wide">
 					<p class="intro-text">
@@ -170,22 +188,22 @@
 					<button type="button" class="intro-button" data-link="https://www.youtube.com/embed/aq73sZPq2-Q?enablejsapi=1&version=3&playerapiid=ytplayer">
 					<strong>See full video</strong></button>
 					<video autoplay muted loop preload playsinline 
-						id="grid-content-media"><source src="videos/aos/intro-15-dec.MOV"/>
+						class="grid-content-media"><source src="videos/aos/intro-15-dec.MOV"/>
 					</video>
 					<div class="video-frame"></div>
 				</div>
 				<div class="grid-content-wide">
-					<img src="images/aos/army-above.JPG" id="grid-content-media"></div>
+					<img src="images/aos/army-above.JPG" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/beast-glory.png" id="grid-content-media"></div>
+					<img src="images/aos/beast-glory.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/khorne-glory.png" id="grid-content-media"></div>
+					<img src="images/aos/khorne-glory.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/sylva-army-above.png" id="grid-content-media"></div>
+					<img src="images/aos/sylva-army-above.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/small-fight.png" id="grid-content-media"></div>
+					<img src="images/aos/small-fight.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/best-syl-fight.png" id="grid-content-media"></div>
+					<img src="images/aos/best-syl-fight.png" class="grid-content-media"></div>
 			</div>
 		</div>
 
@@ -197,7 +215,7 @@
 			</div>
 			<div class="grid-container">
 				<div class="grid-content-wide">
-					<img src="images/aos/intro-nov.png" id="grid-content-media">
+					<img src="images/aos/intro-nov.png" class="grid-content-media">
 				</div>
 				<div class="grid-content-wide">
 					<p class="intro-text">
@@ -209,22 +227,22 @@
 					<button type="button" class="intro-button" data-link="https://www.youtube.com/embed/xd5b5dQOUjk?enablejsapi=1&version=3&playerapiid=ytplayer">
 					<strong>See full video</strong></button>
 					<video autoplay muted loop preload playsinline 
-						id="grid-content-media"><source src="videos/aos/intro-2-nov.MOV"/>
+						class="grid-content-media"><source src="videos/aos/intro-2-nov.MOV"/>
 					</video>
 					<div class="video-frame"></div>
 				</div>
 				<div class="grid-content-wide">
-					<img src="images/aos/daemon-nov.png" id="grid-content-media"></div>
+					<img src="images/aos/daemon-nov.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/battlefield.png" id="grid-content-media"></div>
+					<img src="images/aos/battlefield.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/plague-wolf.png" id="grid-content-media"></div>
+					<img src="images/aos/plague-wolf.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/overwhelmed.png" id="grid-content-media"></div>
+					<img src="images/aos/overwhelmed.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/final-battle.png" id="grid-content-media"></div>
+					<img src="images/aos/final-battle.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/last-man.png" id="grid-content-media"></div>
+					<img src="images/aos/last-man.png" class="grid-content-media"></div>
 			</div>
 		</div>
 
@@ -236,7 +254,7 @@
 			</div>
 			<div class="grid-container">
 				<div class="grid-content-wide">
-					<img src="images/aos/intro-oct-clash1.png" id="grid-content-media">
+					<img src="images/aos/intro-oct-clash1.png" class="grid-content-media">
 				</div>
 				<div class="grid-content-wide">
 					<p class="intro-text">
@@ -248,22 +266,22 @@
 					<button type="button" class="intro-button" data-link="https://www.youtube.com/embed/nqVes4EnGWM?enablejsapi=1&version=3&playerapiid=ytplayer">
 					<strong>See full video</strong></button>
 					<video autoplay muted loop preload playsinline 
-						id="grid-content-media"><source src="videos/aos/intro-vid-27oct.MOV"/>
+						class="grid-content-media"><source src="videos/aos/intro-vid-27oct.MOV"/>
 					</video>
 					<div class="video-frame"></div>
 				</div>
 				<div class="grid-content-wide">
-					<img src="images/aos/beast-king.png" id="grid-content-media"></div>
+					<img src="images/aos/beast-king.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/giant-charge.png" id="grid-content-media"></div>
+					<img src="images/aos/giant-charge.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/david-vs-goliath.png" id="grid-content-media"></div>
+					<img src="images/aos/david-vs-goliath.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/smash.png" id="grid-content-media"></div>
+					<img src="images/aos/smash.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/slayed.png" id="grid-content-media"></div>
+					<img src="images/aos/slayed.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/surrounded.png" id="grid-content-media"></div>
+					<img src="images/aos/surrounded.png" class="grid-content-media"></div>
 			</div>
 		</div>
 
@@ -275,7 +293,7 @@
 			</div>
 			<div class="grid-container">
 				<div class="grid-content-wide">
-					<img src="images/aos/victory-intro.png" id="grid-content-media">
+					<img src="images/aos/victory-intro.png" class="grid-content-media">
 				</div>
 				<div class="grid-content-wide">
 					<p class="intro-text">
@@ -287,22 +305,22 @@
 					<button type="button" class="intro-button" data-link="https://www.youtube.com/embed/wwInluOrn0E?enablejsapi=1&version=3&playerapiid=ytplayer">
 					<strong>See full video</strong></button>
 					<video autoplay muted loop preload playsinline 
-						id="grid-content-media"><source src="videos/aos/intro-vid-6oct.MOV"/>
+						class="grid-content-media"><source src="videos/aos/intro-vid-6oct.MOV"/>
 					</video>
 					<div class="video-frame"></div>
 				</div>
 				<div class="grid-content-wide">
-					<img src="images/aos/furnace.png" id="grid-content-media"></div>
+					<img src="images/aos/furnace.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/advance.png" id="grid-content-media"></div>
+					<img src="images/aos/advance.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/clash-angels.png" id="grid-content-media"></div>
+					<img src="images/aos/clash-angels.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/wheels-attack.png" id="grid-content-media"></div>
+					<img src="images/aos/wheels-attack.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/hero-rear.png" id="grid-content-media"></div>
+					<img src="images/aos/hero-rear.png" class="grid-content-media"></div>
 				<div class="grid-content-wide">
-					<img src="images/aos/hero-slash-furnace.png" id="grid-content-media"></div>
+					<img src="images/aos/hero-slash-furnace.png" class="grid-content-media"></div>
 			</div>
 		</div>
 		</div>
@@ -398,6 +416,17 @@
 
 	$(document).ready(function() {
 
+		/* Mobile Web menu toggle on click */
+		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+			$("#mw-menubar").toggle(
+				function() {
+					$("#mobile-menu-dropdown").css({"display": "inline-grid"});
+				},
+				function() {
+					$("#mobile-menu-dropdown").css({"display": "none"});
+			});
+		}
+
 		// Loopa igenom ul och sätter ID på varje li cell
         var listTabs = $("#menubar-id li");
 		listTabs.each(function(index, li) {
@@ -444,6 +473,8 @@
 	    });
 
 	    $("#tabs").tabs();
+
+
 
 		/* Disable tabs if mobile device - caused slider to break 
 		if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
