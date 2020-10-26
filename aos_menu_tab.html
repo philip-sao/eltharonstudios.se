@@ -95,9 +95,12 @@
 				<span class="VS">VS</span> 
 				Khorne-Beastmen
 			</div>
+
+			<div class="img-frame"></div>
+
 			<div class="grid-container">
 				<div class="grid-content-wide">
-					<img src="images/aos/intro-sylvaneth.png" class="grid-content-media">
+					<img src="images/aos/intro-sylvaneth.png" data-src="images/aos/intro-sylvaneth.png" class="grid-content-media">
 				</div>
 				<div class="grid-content-wide">
 					<p class="intro-text">
@@ -114,7 +117,8 @@
 					<div class="video-frame"></div>
 				</div>
 				<div class="grid-content-wide">
-					<img src="images/aos/chaos-beasts.JPG" class="grid-content-media"></div>
+					<img src="images/aos/chaos-beasts.JPG" class="grid-content-media">
+				</div>
 				<!--<div class="grid-content-right">Chaos join together<br></div>-->
 				<div class="grid-content-wide">
 					<img src="images/aos/sylvaneth.png" class="grid-content-media"></div>
@@ -125,7 +129,7 @@
 				<div class="grid-content-left">
 					<img src="images/aos/chaos-lords.png" class="grid-content-media"></div>
 				<div class="grid-content-right">
-					<img src="images/aos/stormcasts.png" class="grid-content-media"></div>
+					<img src="images/aos/stormcasts.png" data-src="images/aos/stormcasts.png" class="grid-content-media"></div>
 			</div>
 		</div>
 
@@ -416,6 +420,9 @@
 
 	$(document).ready(function() {
 
+		/* Call resize to start with proper header */
+		headerResize();
+
 		/* Mobile Web menu toggle on click */
 		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
 			$("#mw-menubar").toggle(
@@ -448,7 +455,7 @@
 			$('html, body').animate({scrollTop: '0px'}, 300);
 		});
 
-		/* Pop-up frame */
+		/* Pop-up frame - youtube */
 		$(".intro-button").click(function () {
 		    var $this = $(this);
 		    var $iframe = $("<iframe>").attr("src", $this.data("link")); /* snabbare att lägga på css här?*/
@@ -456,6 +463,14 @@
 		    $(".video-frame").append($iframe);
 		    /*$iframe.wrap("<div class='class-video'>");*/
 		});
+
+		/* Pop-up frame - image 
+		$(".grid-content-media").click(function () {
+		    var $this = $(this);
+		    var $iframe = $("<iframe>").attr("src", $this.data("src")); 
+		    $iframe.addClass("img-frame-class");
+		    $(".img-frame").append($iframe);
+		});*/
 
 		/* Checks if mouse is outside frame */
 		$('.video-frame').hover(function() { 
