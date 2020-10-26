@@ -5,6 +5,7 @@
 
 html, body {
 	margin: 0;
+  background-color: #0A0E29;
 }
 
 /* Only allow up and down scroll in MW */
@@ -200,7 +201,7 @@ html, body {
 
 .content {
   position: relative;
-  background-color: #3D3F3F;
+  background-color: #0A0E29;
 }
 
 #intro-video {
