@@ -41,8 +41,8 @@ html, body {
 }
 
 .header-menu label {
+  display: inline-block;
   padding: 15px 40px;
-  /*margin: 0 40px;*/
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1.90px;
@@ -72,9 +72,8 @@ html, body {
 }
 
 .AoS-label:hover, .WF8-label:hover, .Paint-label:hover {
-  /*background-color: #f2f2f2;*/
-  color: antiquewhite;
   cursor: pointer;
+  color: antiquewhite;
 }
 
 .header-follow-me {

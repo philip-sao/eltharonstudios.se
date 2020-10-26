@@ -45,6 +45,7 @@ html, body {
 }
 
 .header-menu label {
+  display: inline-block;
   padding: 15px 40px;
   font-size: 14px;
   font-weight: bold;
