@@ -17,6 +17,8 @@
 
 	  gtag('config', 'UA-178157444-1');
 	</script>
+	<!-- End Google Analytics tag -->
+
 	<title>Eltharon Studios</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/index_styling.css">
@@ -39,13 +41,16 @@
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
+	<!-- Loading img -->
 	<div class="se-pre-con"></div>
 
 	<!-- Header section -->
 	<div id="header-bar-id" class="header-bar">
-		<a href="https://www.eltharonstudios.se">
-			<img src="images/logo.png" id="logo">
-		</a>
+		<div>
+			<a href="https://www.eltharonstudios.se">
+				<img src="images/logo.png" id="logo">
+			</a>
+		</div>
 		<div class="header-menu">
 			<button class="header-menu-button" onclick="location.href='https://www.eltharonstudios.se/aos_menu_tab.html';">
 			<label class="AoS-label">Age of Sigmar</label></button>
@@ -78,12 +83,12 @@
 		</div>
 	</div>
 
-	<!-- Start content section -->
-	<div class="content">
+	<!-- Start content-banner section -->
+	<div class="content-banner">
 			<video autoplay muted loop preload playsinline id="intro-video">
 				<source src="videos/intro_HD.MOV"/>
 			</video>
-			<!-- NEW INTRO --> 
+			<!-- Intro Banner --> 
 			<div id="intro-banner-container" class="style fade-in">
 				<p class="intro-header">
 					<strong>Warhammer Age of Sigmar<br></strong>
@@ -99,25 +104,79 @@
 				</div>
 			</div>
 
-			<!-- Mobile Web Big image -->
+			<!-- Mobile Web Big image 
 			<div class="intro-content-container">
-				<p class="intro-content-container-text"> JOIN THE FIGHT </p>
+				<p class="intro-content-container-text">JOIN THE FIGHT</p>
 				<button type="button" class="intro-goto-button-mw" onclick="location.href='https://www.eltharonstudios.se/aos_menu_tab.html';">
 						View Latest Battle Report
 					</button>
 				<div class="intro-content-grid">
 					<div class="intro-grid-content">
-						<img src="images/deamon-gray1.png" id="intro-grid-media"></div>
+						<img src="images/deamon-gray1.png" id="intro-grid-media">
 					</div>
-
-			</div>
+				</div>
+			</div>-->
+			
 		</div>
 
-		<!-- Start footer section 
-		<div class="footer">
-			<p id="open-footer">About us</p> 
-			<p id="open-footer">FAQ</p> 
-		</div>-->
+		<!-- Content Summary -->
+		<div class="content-summary">
+			
+			<div class="content-summary-divider"></div>
+			<p class="content-summary-header">BLADES OF KHORNE</p>
+			<div class="content-summary-divider"></div>
+			<div class="content-section-wrapper">
+				<div class="section-container">
+					<p class="section-text">BLOOD FOR THE BLOOD GOD<br><br>The Khorne daemons and warriors follow a bloody and desctructive belief. These  hellspawns will not lay rest until they have pleased the bloodthirsty Khorne Gods. <br><br>The worst of them all depicted to the right, Daemon Lord Bloodthirster, Skarbrand</p>
+				</div>
+				<div class="section-container">
+					<img src="images/deamon-gray1.png" class="section-image">
+				</div>
+			</div>
+
+			<div class="content-summary-divider"></div>
+			<p class="content-summary-header">BEASTS OF CHAOS</p>
+			<div class="content-summary-divider"></div>
+			<div class="content-section-wrapper">
+				<div class="section-container">
+					<img src="images/ghorgon.JPG" class="section-image">
+				</div>
+				<div class="section-container">
+					<p class="section-text">THE BEASTHERDS APPROACH<br><br>Beasts of Chaos, also known as The Beastmen, are children of Chaos that approach from the wilderness and woodlands. Known for their raw strenght and violence, these creatures comes in huge numbers and bring only desctruction<br><br>Shown to the left is the Ghorgon, a feared deamonic savage with four arms and massive amounts of attacks</p>
+				</div>
+			</div>
+
+			<div class="content-summary-divider"></div>
+			<p class="content-summary-header">SYLVANETH</p>
+			<div class="content-summary-divider"></div>
+			<div class="content-section-wrapper">
+				<div class="section-container">
+					<p class="section-text">PROTECT THE REALM OF LIFE<br><br>Sylvaneth are the true protectors of nature in the mortal realm. These magical spirits will defend their forest homes at any cost. Defile their sacred forests and they will slay anything with terrifying power.<br><br>Drycha Hamadreth, to the right, is the daughter of Alarielle The Everqueen - godess of life magic</p>
+				</div>
+				<div class="section-container">
+					<img src="images/drycha.JPG" class="section-image">
+				</div>
+			</div>
+
+			<div class="content-summary-divider"></div>
+			<p class="content-summary-header">STORMCAST ETERNALS</p>
+			<div class="content-summary-divider"></div>
+			<div class="content-section-wrapper">
+				<div class="section-container">
+					<img src="images/celestant-prime.JPG" class="section-image">
+				</div>
+				<div class="section-container">
+					<p class="section-text">WRATH OF THE GOD-KING<br><br>Decendants from Sigmar, supernatural warriors of celestial power. The Stormcast Eternals are avenging angels guarding the race of men, strenghtened by Sigmars blessings and divine power.<br><br>Iconised on the left is the god-king Celestial-Prime - bearer of the World-Hammer</p>
+				</div>
+			</div>
+
+			<div class="content-summary-divider"></div>
+
+		</div>
+
+	<button type="button" id="to-top-button-id">
+		Back To The Top
+	</button>
 
 </body>
 </html>
@@ -138,30 +197,25 @@
 		}
 
 		window.onscroll = function() {
- 			//headerResize();
+ 			headerResize();
 		};
 
 		function headerResize() {
-			/*var hideArrow = document.getElementById("intro-arrow");*/
-			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-				document.getElementById("header-bar-id").style.opacity = "1";  
-				/*hideArrow.style.visibility = "hidden";*/
+			if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+				/*document.getElementById("header-bar-id").style.opacity = "1";  */
+
+				document.getElementById("to-top-button-id").style.opacity = "1";
 			} else {
-				document.getElementById("header-bar-id").style.opacity = "0.7";
-				/*hideArrow.style.visibility = "visible";*/
+				/*document.getElementById("header-bar-id").style.opacity = "0.7";*/
+
+				document.getElementById("to-top-button-id").style.opacity = "0";
 			}
 		}
 
-		/*$( ".intro-arrow-container" ).click(function() {
-	        window.scrollTo ( {
-	            top: 800,
-	            behavior:"smooth"
-	        });
+		/* Scroll to top when clicked */
+		$("#to-top-button-id, .menubar-link").click(function() {
+			$('html, body').animate({scrollTop: '0px'}, 300);
 		});
-
-		$("#open-footer").click(function() {
-  			alert()
-		});*/
 		
 	});
 
