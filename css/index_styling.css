@@ -203,7 +203,7 @@ html, body {
 
 .content-banner {
   position: relative;
-  /*background-color: #0A0E29;*/
+  background-color: #0A0E29;
 }
 
 #intro-video {
@@ -276,7 +276,7 @@ html, body {
 @media (max-width: 980px) {
 
   .content-banner {
-    /*background-color: #0A0E29;*/
+    background-color: unset;
   }
 
   #intro-video {
@@ -288,7 +288,7 @@ html, body {
     display: block;
     position: relative;
     background: white;
-    padding: 2% 0 8% 0;
+    padding: 10% 0 40% 0;
     background-color: #eaeaea;
   }
 
@@ -379,6 +379,7 @@ html, body {
 
 .content-summary {
   display: block;
+  margin: 5% 0 10% 0;
 }
 
 .content-summary-divider { 
