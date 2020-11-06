@@ -49,7 +49,7 @@ html, body {
 .header-menu label {
   display: inline-block;
   padding: 8px 45px;
-  font-size: 14px;
+  /*font-size: 14px;*/
   font-weight: bold;
   letter-spacing: 1.90px;
   border-bottom: ridge 1px;
@@ -206,6 +206,10 @@ html, body {
   background-color: #0A0E29;
 }
 
+.mw-content-summary-divider {
+  display: none;
+}
+
 #intro-video {
   width: 100%;
   padding-top: 75px;
@@ -279,16 +283,22 @@ html, body {
     background-color: unset;
   }
 
+  .mw-content-summary-divider {
+    display: block;
+    border-bottom: solid 1px darkgoldenrod;
+    margin: 2% 2%;
+  }
+
   #intro-video {
     width: 100%;
-    padding: 70px 0 15px 0;
+    padding: 70px 0 10% 0;
   }
 
   #intro-banner-container {
     display: block;
     position: relative;
     background: white;
-    padding: 20% 0 40% 0;
+    padding: 10% 0 30% 0;
     background-color: #eaeaea;
   }
 
@@ -425,6 +435,10 @@ html, body {
 }
 
 @media screen and (max-width: 980px) {
+
+  .content-summary-header {
+    padding: 5% 0;
+  }
 
   .section-text {
     width: 100%;
