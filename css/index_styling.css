@@ -18,7 +18,8 @@ html, body {
 /* ------------ Header Bar Section ------------ */
 
 .header-bar {
-  position: fixed;
+  /*position: fixed;*/
+  position: absolute;
   top: 0;
   z-index: 1000;
   padding: 0 10%;
@@ -291,14 +292,14 @@ html, body {
 
   #intro-video {
     width: 100%;
-    padding: 70px 0 10% 0;
+    padding: 20% 2% 2% 2%;
   }
 
   #intro-banner-container {
     display: block;
     position: relative;
     background: white;
-    padding: 10% 0 30% 0;
+    padding: 5% 0;
     background-color: #eaeaea;
   }
 
@@ -401,8 +402,9 @@ html, body {
 .content-summary-header {
   display: block;
   letter-spacing: 4px;
-  font-family: fantasy !important;
-  font-size: 40px;
+  /*font-family: fantasy !important;*/
+  font-size: 30px;
+  font-weight: 900;
   color: gray;
   margin: 0;
   left: 0;  
@@ -437,16 +439,17 @@ html, body {
 @media screen and (max-width: 980px) {
 
   .content-summary-header {
-    padding: 5% 0;
+    padding: 8% 0;
+    font-size: 20px;
   }
 
   .section-text {
     width: 100%;
     letter-spacing: 1px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1.2rem;
     margin: 0;
-    padding: 5%;
+    padding: 8% 5%;
   }
 
   .section-image {

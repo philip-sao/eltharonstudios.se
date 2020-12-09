@@ -403,8 +403,8 @@
 	function headerResize() {
 		if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 			if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-				document.getElementById("header-bar-id").style.height = "60px";  
-				document.getElementById("menubar-id").style.top = "60px"; 
+				document.getElementById("header-bar-id").style.height = "0px";  
+				document.getElementById("menubar-id").style.top = "0px"; 
 			}
 			document.getElementById("to-top-button-id").style.opacity = "1";
 		} else {
