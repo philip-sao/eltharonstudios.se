@@ -288,7 +288,8 @@ ul {
 #page-content {
   position: relative;
   top: 100px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+  padding-bottom: 20px;
 }
 
 div.content {
@@ -338,6 +339,7 @@ div.content {
 
 .grid-content-wide {
   grid-column: 1 / span 2;
+  display: flex;
 }
 
 .grid-content-left {
@@ -387,7 +389,7 @@ div.content {
 
 .grid-content-media {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 15px;
   height: 100%
 }
 
@@ -487,6 +489,8 @@ div.content {
 
   .grid-container {
     margin: 1% 5% 5% 5%;
+    box-shadow: none;
+    padding: 0;
   }
 
   .intro-text {
